@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-inspector-id="html:b0e2ff82:0"><head>
+<html lang="zh-CN" data-inspector-id="html:d398bec8:0"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>郴州4天3晚 · 国庆攻略</title>
@@ -584,6 +584,29 @@
             background: var(--apple-gray-dark);
         }
 
+        /* ===== 美团按钮 ===== */
+        .btn-row { display: flex; gap: 8px; }
+        .btn-row .nav-pill, .btn-row .meituan-pill { flex: 1; width: auto; }
+        .meituan-pill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 11px;
+            background: #FFD100;
+            color: #1f1f1f;
+            border: none;
+            border-radius: 18px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-row .meituan-pill { margin-top: 0; }
+        .meituan-pill:active { transform: scale(0.98); background: #F0C200; }
+
         /* ===== 交通分隔线 ===== */
         .trip-divider {
             display: flex;
@@ -890,863 +913,1179 @@
         }
     </style>
 </head>
-<body data-inspector-id="html:b0e2ff82:1">
+<body data-inspector-id="html:d398bec8:1">
     <!-- Hero -->
-    <div class="hero" data-inspector-id="html:b0e2ff82:2">
-        <div class="hero-bg" data-inspector-id="html:b0e2ff82:3"></div>
-        <div class="hero-overlay" data-inspector-id="html:b0e2ff82:4"></div>
-        <div class="hero-content" data-inspector-id="html:b0e2ff82:5">
-            <div class="hero-eyebrow" data-inspector-id="html:b0e2ff82:6">国庆 · 高速免费</div>
-            <h1 data-inspector-id="html:b0e2ff82:7">郴州 4天3晚</h1>
-            <p class="hero-subtitle" data-inspector-id="html:b0e2ff82:8">草原 · 雾漫东江 · 丹霞 · 小众免费</p>
+    <div class="hero" data-inspector-id="html:d398bec8:2">
+        <div class="hero-bg" data-inspector-id="html:d398bec8:3"></div>
+        <div class="hero-overlay" data-inspector-id="html:d398bec8:4"></div>
+        <div class="hero-content" data-inspector-id="html:d398bec8:5">
+            <div class="hero-eyebrow" data-inspector-id="html:d398bec8:6">国庆 · 高速免费</div>
+            <h1 data-inspector-id="html:d398bec8:7">郴州 4天3晚</h1>
+            <p class="hero-subtitle" data-inspector-id="html:d398bec8:8">草原 · 雾漫东江 · 丹霞 · 小众免费</p>
         </div>
     </div>
 
     <!-- 天气卡片 -->
-    <div class="weather-card" data-inspector-id="html:b0e2ff82:9">
-        <div class="weather-icon" data-inspector-id="html:b0e2ff82:10">⛅</div>
-        <div class="weather-info" data-inspector-id="html:b0e2ff82:11">
-            <div class="weather-temp" data-inspector-id="html:b0e2ff82:12">郴州 22℃</div>
-            <div class="weather-desc" data-inspector-id="html:b0e2ff82:13">多云 · 建议长袖+薄外套</div>
+    <div class="weather-card" data-inspector-id="html:d398bec8:9">
+        <div class="weather-icon" data-inspector-id="html:d398bec8:10">⛅</div>
+        <div class="weather-info" data-inspector-id="html:d398bec8:11">
+            <div class="weather-temp" data-inspector-id="html:d398bec8:12">郴州 22℃</div>
+            <div class="weather-desc" data-inspector-id="html:d398bec8:13">多云 · 建议长袖+薄外套</div>
         </div>
-        <div class="weather-mountain" data-inspector-id="html:b0e2ff82:14">
-            <div class="weather-mountain-temp" data-inspector-id="html:b0e2ff82:15">14℃</div>
-            <div class="weather-mountain-label" data-inspector-id="html:b0e2ff82:16">仰天湖山上</div>
+        <div class="weather-mountain" data-inspector-id="html:d398bec8:14">
+            <div class="weather-mountain-temp" data-inspector-id="html:d398bec8:15">14℃</div>
+            <div class="weather-mountain-label" data-inspector-id="html:d398bec8:16">仰天湖山上</div>
         </div>
     </div>
 
     <!-- 总览统计 -->
-    <div class="overview" data-inspector-id="html:b0e2ff82:17">
-        <div class="overview-stats" data-inspector-id="html:b0e2ff82:18">
-            <div class="stat-item" data-inspector-id="html:b0e2ff82:19">
-                <div class="stat-num" data-inspector-id="html:b0e2ff82:20">4</div>
-                <div class="stat-label" data-inspector-id="html:b0e2ff82:21">天数</div>
+    <div class="overview" data-inspector-id="html:d398bec8:17">
+        <div class="overview-stats" data-inspector-id="html:d398bec8:18">
+            <div class="stat-item" data-inspector-id="html:d398bec8:19">
+                <div class="stat-num" data-inspector-id="html:d398bec8:20">4</div>
+                <div class="stat-label" data-inspector-id="html:d398bec8:21">天数</div>
             </div>
-            <div class="stat-item" data-inspector-id="html:b0e2ff82:22">
-                <div class="stat-num" data-inspector-id="html:b0e2ff82:23">10+</div>
-                <div class="stat-label" data-inspector-id="html:b0e2ff82:24">打卡点</div>
+            <div class="stat-item" data-inspector-id="html:d398bec8:22">
+                <div class="stat-num" data-inspector-id="html:d398bec8:23">10+</div>
+                <div class="stat-label" data-inspector-id="html:d398bec8:24">打卡点</div>
             </div>
-            <div class="stat-item" data-inspector-id="html:b0e2ff82:25">
-                <div class="stat-num" data-inspector-id="html:b0e2ff82:26">3</div>
-                <div class="stat-label" data-inspector-id="html:b0e2ff82:27">住宿</div>
+            <div class="stat-item" data-inspector-id="html:d398bec8:25">
+                <div class="stat-num" data-inspector-id="html:d398bec8:26">3</div>
+                <div class="stat-label" data-inspector-id="html:d398bec8:27">住宿</div>
             </div>
-            <div class="stat-item" data-inspector-id="html:b0e2ff82:28">
-                <div class="stat-num" data-inspector-id="html:b0e2ff82:29">¥4147</div>
-                <div class="stat-label" data-inspector-id="html:b0e2ff82:30">自驾预算</div>
+            <div class="stat-item" data-inspector-id="html:d398bec8:28">
+                <div class="stat-num" data-inspector-id="html:d398bec8:29">¥4147</div>
+                <div class="stat-label" data-inspector-id="html:d398bec8:30">自驾预算</div>
             </div>
         </div>
     </div>
 
     <!-- 下一站提醒 -->
-    <div class="next-stop-bar" onclick="goToNextStop()" data-inspector-id="html:b0e2ff82:31">
-        <div class="next-stop-arrow" data-inspector-id="html:b0e2ff82:32">→</div>
-        <div class="next-stop-info" data-inspector-id="html:b0e2ff82:33">
-            <div class="next-stop-label" data-inspector-id="html:b0e2ff82:34">下一站</div>
-            <div class="next-stop-name" id="nextStopName" data-inspector-id="html:b0e2ff82:35">仰天湖大草原</div>
-            <div class="next-stop-drive" id="nextStopDrive" data-inspector-id="html:b0e2ff82:36">车程约1.5小时 · 盘山公路</div>
+    <div class="next-stop-bar" onclick="goToNextStop()" data-inspector-id="html:d398bec8:31">
+        <div class="next-stop-arrow" data-inspector-id="html:d398bec8:32">→</div>
+        <div class="next-stop-info" data-inspector-id="html:d398bec8:33">
+            <div class="next-stop-label" data-inspector-id="html:d398bec8:34">下一站</div>
+            <div class="next-stop-name" id="nextStopName" data-inspector-id="html:d398bec8:35">仰天湖大草原</div>
+            <div class="next-stop-drive" id="nextStopDrive" data-inspector-id="html:d398bec8:36">车程约1.5小时 · 盘山公路</div>
         </div>
-        <div class="next-stop-nav" data-inspector-id="html:b0e2ff82:37">导航</div>
+        <div class="next-stop-nav" data-inspector-id="html:d398bec8:37">导航</div>
     </div>
 
     <!-- 天数切换 -->
-    <div class="day-tabs" data-inspector-id="html:b0e2ff82:38">
-        <button class="tab-btn" data-day="overview" data-inspector-id="html:b0e2ff82:39">
-            <span class="tab-label" data-inspector-id="html:b0e2ff82:40">总览</span>时间轴
+    <div class="day-tabs" data-inspector-id="html:d398bec8:38">
+        <button class="tab-btn" data-day="overview" data-inspector-id="html:d398bec8:39">
+            <span class="tab-label" data-inspector-id="html:d398bec8:40">总览</span>时间轴
         </button>
-        <button class="tab-btn active" data-day="1" data-inspector-id="html:b0e2ff82:41">
-            <span class="tab-label" data-inspector-id="html:b0e2ff82:42">Day 1</span>抵达
+        <button class="tab-btn active" data-day="1" data-inspector-id="html:d398bec8:41">
+            <span class="tab-label" data-inspector-id="html:d398bec8:42">Day 1</span>抵达
         </button>
-        <button class="tab-btn" data-day="2" data-inspector-id="html:b0e2ff82:43">
-            <span class="tab-label" data-inspector-id="html:b0e2ff82:44">Day 2</span>仰天湖
+        <button class="tab-btn" data-day="2" data-inspector-id="html:d398bec8:43">
+            <span class="tab-label" data-inspector-id="html:d398bec8:44">Day 2</span>仰天湖
         </button>
-        <button class="tab-btn" data-day="3" data-inspector-id="html:b0e2ff82:45">
-            <span class="tab-label" data-inspector-id="html:b0e2ff82:46">Day 3</span>东江丹霞
+        <button class="tab-btn" data-day="3" data-inspector-id="html:d398bec8:45">
+            <span class="tab-label" data-inspector-id="html:d398bec8:46">Day 3</span>东江丹霞
         </button>
-        <button class="tab-btn" data-day="4" data-inspector-id="html:b0e2ff82:47">
-            <span class="tab-label" data-inspector-id="html:b0e2ff82:48">Day 4</span>高椅岭
+        <button class="tab-btn" data-day="4" data-inspector-id="html:d398bec8:47">
+            <span class="tab-label" data-inspector-id="html:d398bec8:48">Day 4</span>高椅岭
         </button>
     </div>
 
     <!-- ====== 时间轴总览 ====== -->
-    <div class="timeline-overview" id="day-overview" data-inspector-id="html:b0e2ff82:49">
-        <div class="timeline-day-title" data-inspector-id="html:b0e2ff82:50">Day 1 · 抵达市区</div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:51">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:52">上午</div>
-            <div class="timeline-dot transport" data-inspector-id="html:b0e2ff82:53"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:54">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:55">郴州西站抵达</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:56">取车 → 进市区</div>
+    <div class="timeline-overview" id="day-overview" data-inspector-id="html:d398bec8:49">
+        <div class="timeline-day-title" data-inspector-id="html:d398bec8:50">Day 1 · 抵达市区</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:51">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:52">上午</div>
+            <div class="timeline-dot transport" data-inspector-id="html:d398bec8:53"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:54">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:55">郴州西站抵达</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:56">取车 → 进市区</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:57">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:58">中午</div>
-            <div class="timeline-dot hotel" data-inspector-id="html:b0e2ff82:59"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:60">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:61">麓峰酒店入住</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:62">裕后街旁 · 免费停车</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:57">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:58">中午</div>
+            <div class="timeline-dot hotel" data-inspector-id="html:d398bec8:59"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:60">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:61">麓峰酒店入住</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:62">裕后街旁 · 免费停车</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:63">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:64">下午</div>
-            <div class="timeline-dot free" data-inspector-id="html:b0e2ff82:65"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:66">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:67">五岭阁 / 万华岩（二选一）</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:68">免费休闲 or 避暑溶洞</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:63">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:64">下午</div>
+            <div class="timeline-dot free" data-inspector-id="html:d398bec8:65"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:66">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:67">五岭阁 / 万华岩（二选一）</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:68">免费休闲 or 避暑溶洞</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:69">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:70">晚上</div>
-            <div class="timeline-dot food" data-inspector-id="html:b0e2ff82:71"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:72">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:73">裕后街夜景 + 栖凤渡鱼粉</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:74">古街夜景 · 郴州招牌</div>
-            </div>
-        </div>
-
-        <div class="timeline-day-title" data-inspector-id="html:b0e2ff82:75">Day 2 · 仰天湖</div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:76">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:77">早上</div>
-            <div class="timeline-dot food" data-inspector-id="html:b0e2ff82:78"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:79">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:80">市区早餐</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:81">吃碗鱼粉再上山</div>
-            </div>
-        </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:82">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:83">全天</div>
-            <div class="timeline-dot spot" data-inspector-id="html:b0e2ff82:84"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:85">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:86">仰天湖大草原</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:87">3.5-4小时 · 带薄外套</div>
-            </div>
-        </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:88">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:89">下午</div>
-            <div class="timeline-dot hotel" data-inspector-id="html:b0e2ff82:90"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:91">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:92">顺源酒店入住（东江镇）</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:93">离景区260米 · 看晨雾方便</div>
-            </div>
-        </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:94">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:95">晚上</div>
-            <div class="timeline-dot food" data-inspector-id="html:b0e2ff82:96"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:97">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:98">东江镇农家菜</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:99">清水鱼必点</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:69">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:70">晚上</div>
+            <div class="timeline-dot food" data-inspector-id="html:d398bec8:71"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:72">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:73">裕后街夜景 + 栖凤渡鱼粉</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:74">古街夜景 · 郴州招牌</div>
             </div>
         </div>
 
-        <div class="timeline-day-title" data-inspector-id="html:b0e2ff82:100">Day 3 · 雾漫东江+丹霞</div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:101">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:102">清晨</div>
-            <div class="timeline-dot spot" data-inspector-id="html:b0e2ff82:103"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:104">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:105">雾漫小东江</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:106">6:00-9:00 · 2号观景台拍撒网</div>
+        <div class="timeline-day-title" data-inspector-id="html:d398bec8:75">Day 2 · 仰天湖</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:76">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:77">早上</div>
+            <div class="timeline-dot food" data-inspector-id="html:d398bec8:78"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:79">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:80">市区早餐</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:81">吃碗鱼粉再上山</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:107">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:108">上午</div>
-            <div class="timeline-dot free" data-inspector-id="html:b0e2ff82:109"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:110">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:111">白廊环湖公路</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:112">免费 · 郴州小洱海</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:82">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:83">全天</div>
+            <div class="timeline-dot spot" data-inspector-id="html:d398bec8:84"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:85">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:86">仰天湖大草原</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:87">3.5-4小时 · 带薄外套</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:113">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:114">下午</div>
-            <div class="timeline-dot spot" data-inspector-id="html:b0e2ff82:115"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:116">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:117">飞天山竹筏 / 711时光小镇</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:118">二选一 · 竹筏丹霞 or 免费工业风</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:88">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:89">下午</div>
+            <div class="timeline-dot hotel" data-inspector-id="html:d398bec8:90"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:91">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:92">顺源酒店入住（东江镇）</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:93">离景区260米 · 看晨雾方便</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:119">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:120">傍晚</div>
-            <div class="timeline-dot free" data-inspector-id="html:b0e2ff82:121"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:122">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:123">马皇丘大峡谷</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:124">免费 · S弯公路日落</div>
-            </div>
-        </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:125">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:126">晚上</div>
-            <div class="timeline-dot hotel" data-inspector-id="html:b0e2ff82:127"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:128">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:129">水寨人家民宿</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:130">小岛民宿 · 近高椅岭</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:94">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:95">晚上</div>
+            <div class="timeline-dot food" data-inspector-id="html:d398bec8:96"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:97">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:98">东江镇农家菜</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:99">清水鱼必点</div>
             </div>
         </div>
 
-        <div class="timeline-day-title" data-inspector-id="html:b0e2ff82:131">Day 4 · 高椅岭返程</div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:132">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:133">清晨</div>
-            <div class="timeline-dot spot" data-inspector-id="html:b0e2ff82:134"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:135">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:136">高椅岭</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:137">7点前进园 · 错峰无人丹霞</div>
+        <div class="timeline-day-title" data-inspector-id="html:d398bec8:100">Day 3 · 雾漫东江+丹霞</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:101">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:102">清晨</div>
+            <div class="timeline-dot spot" data-inspector-id="html:d398bec8:103"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:104">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:105">雾漫小东江</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:106">6:00-9:00 · 2号观景台拍撒网</div>
             </div>
         </div>
-        <div class="timeline-item" data-inspector-id="html:b0e2ff82:138">
-            <div class="timeline-time" data-inspector-id="html:b0e2ff82:139">上午</div>
-            <div class="timeline-dot transport" data-inspector-id="html:b0e2ff82:140"></div>
-            <div class="timeline-info" data-inspector-id="html:b0e2ff82:141">
-                <div class="timeline-name" data-inspector-id="html:b0e2ff82:142">西站还车 → 高铁返程</div>
-                <div class="timeline-meta" data-inspector-id="html:b0e2ff82:143">建议10点前出发避高峰</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:107">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:108">上午</div>
+            <div class="timeline-dot free" data-inspector-id="html:d398bec8:109"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:110">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:111">白廊环湖公路</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:112">免费 · 郴州小洱海</div>
+            </div>
+        </div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:113">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:114">下午</div>
+            <div class="timeline-dot spot" data-inspector-id="html:d398bec8:115"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:116">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:117">飞天山竹筏 / 711时光小镇</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:118">二选一 · 竹筏丹霞 or 免费工业风</div>
+            </div>
+        </div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:119">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:120">傍晚</div>
+            <div class="timeline-dot free" data-inspector-id="html:d398bec8:121"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:122">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:123">马皇丘大峡谷</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:124">免费 · S弯公路日落</div>
+            </div>
+        </div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:125">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:126">晚上</div>
+            <div class="timeline-dot hotel" data-inspector-id="html:d398bec8:127"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:128">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:129">水寨人家民宿</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:130">小岛民宿 · 近高椅岭</div>
+            </div>
+        </div>
+
+        <div class="timeline-day-title" data-inspector-id="html:d398bec8:131">Day 4 · 高椅岭返程</div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:132">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:133">清晨</div>
+            <div class="timeline-dot spot" data-inspector-id="html:d398bec8:134"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:135">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:136">高椅岭</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:137">7点前进园 · 错峰无人丹霞</div>
+            </div>
+        </div>
+        <div class="timeline-item" data-inspector-id="html:d398bec8:138">
+            <div class="timeline-time" data-inspector-id="html:d398bec8:139">上午</div>
+            <div class="timeline-dot transport" data-inspector-id="html:d398bec8:140"></div>
+            <div class="timeline-info" data-inspector-id="html:d398bec8:141">
+                <div class="timeline-name" data-inspector-id="html:d398bec8:142">西站还车 → 高铁返程</div>
+                <div class="timeline-meta" data-inspector-id="html:d398bec8:143">建议10点前出发避高峰</div>
             </div>
         </div>
     </div>
 
     <!-- ====== Day 1 ====== -->
-    <div class="day-panel active" id="day-1" data-inspector-id="html:b0e2ff82:144">
-        <div class="card-list" data-inspector-id="html:b0e2ff82:145">
-            <div class="card" data-inspector-id="html:b0e2ff82:146">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')" data-inspector-id="html:b0e2ff82:147">
-                    <span class="card-badge transport" data-inspector-id="html:b0e2ff82:148">🚄 抵达</span>
+    <div class="day-panel active" id="day-1" data-inspector-id="html:d398bec8:144">
+        <div class="card-list" data-inspector-id="html:d398bec8:145">
+            <div class="card" data-inspector-id="html:d398bec8:146">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')" data-inspector-id="html:d398bec8:147">
+                    <span class="card-badge transport" data-inspector-id="html:d398bec8:148">🚄 抵达</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:149">
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:150">郴州西站 / 高速出口</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:151">上午抵达 · 取车后进市区</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:152">高铁：广州南→郴州西（1.5-2h），出站步行3分钟取车。自驾：京港澳高速4.5h直达，建议6点前出发避堵。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:153">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:154">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:149">
+                    <div class="card-title" data-inspector-id="html:d398bec8:150">郴州西站 / 高速出口</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:151">上午抵达 · 取车后进市区</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:152">高铁：广州南→郴州西（1.5-2h），出站步行3分钟取车。自驾：京港澳高速4.5h直达，建议6点前出发避堵。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:153">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:154">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:155">
-                        <ul data-inspector-id="html:b0e2ff82:156">
-                            <li data-inspector-id="html:b0e2ff82:157">国庆高铁票提前15天抢，返程票最难买</li>
-                            <li data-inspector-id="html:b0e2ff82:158">租车提前在APP下单，现场取车排队久</li>
-                            <li data-inspector-id="html:b0e2ff82:159">国庆高速容易堵，建议早6点前上高速</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:155">
+                        <ul data-inspector-id="html:d398bec8:156">
+                            <li data-inspector-id="html:d398bec8:157">国庆高铁票提前15天抢，返程票最难买</li>
+                            <li data-inspector-id="html:d398bec8:158">租车提前在APP下单，现场取车排队久</li>
+                            <li data-inspector-id="html:d398bec8:159">国庆高速容易堵，建议早6点前上高速</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州西站')" data-inspector-id="html:b0e2ff82:160">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:161"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:162"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州西站')" data-inspector-id="html:d398bec8:160">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:161"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:162"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:163">
-                <span data-inspector-id="html:b0e2ff82:164">车程约25分钟</span><div class="line" data-inspector-id="html:b0e2ff82:165"></div><span data-inspector-id="html:b0e2ff82:166">入住酒店</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:163">
+                <span data-inspector-id="html:d398bec8:164">车程约25分钟</span><div class="line" data-inspector-id="html:d398bec8:165"></div><span data-inspector-id="html:d398bec8:166">入住酒店</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:167">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LUUUQxDoK5')" data-inspector-id="html:b0e2ff82:168">
-                    <span class="card-badge hotel" data-inspector-id="html:b0e2ff82:169">🏨 住宿</span>
+            <div class="card" data-inspector-id="html:d398bec8:167">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LUUUQxDoK5')" data-inspector-id="html:d398bec8:168">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:169">🏨 住宿</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:170">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:171">🚗 从西站过来 · 约25分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:172">麓峰酒店（裕后街店）</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:173">¥450/晚 · 免费停车 · 步行600米到古街</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:174">郴州市中心，设施较新，下楼就是美食街。适合抵达日休整，逛市区夜景超方便。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:175">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:176">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:170">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:171">🚗 从西站过来 · 约25分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:172">麓峰酒店（裕后街店）</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:173">¥450/晚 · 免费停车 · 步行600米到古街</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:174">郴州市中心，设施较新，下楼就是美食街。适合抵达日休整，逛市区夜景超方便。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:175">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:176">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:177">
-                        <ul data-inspector-id="html:b0e2ff82:178">
-                            <li data-inspector-id="html:b0e2ff82:179">国庆房价翻倍，提前2周订</li>
-                            <li data-inspector-id="html:b0e2ff82:180">酒店停车场不大，早到才有位</li>
-                            <li data-inspector-id="html:b0e2ff82:181">住高楼层安静，低楼层临街有点吵</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:177">
+                        <ul data-inspector-id="html:d398bec8:178">
+                            <li data-inspector-id="html:d398bec8:179">国庆房价翻倍，提前2周订</li>
+                            <li data-inspector-id="html:d398bec8:180">酒店停车场不大，早到才有位</li>
+                            <li data-inspector-id="html:d398bec8:181">住高楼层安静，低楼层临街有点吵</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州麓峰酒店裕后街店')" data-inspector-id="html:b0e2ff82:182">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:183"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:184"></path></svg>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:182">
+                        <button class="nav-pill" onclick="openNav('郴州麓峰酒店裕后街店')" data-inspector-id="html:d398bec8:183">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:184"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:185"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('郴州麓峰酒店裕后街店')" data-inspector-id="html:d398bec8:186">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:187"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:188"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:189">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/s3LaUbEL4s')" data-inspector-id="html:d398bec8:190">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:191">🏨 住宿 · 品质之选</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:192">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:193">🚗 从西站过来 · 约30分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:194">亚朵酒店（市政府五岭大道店）</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:195">¥550/晚 · 品质连锁 · 含早 · 免费停车</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:196">五岭广场商圈，房间新、床品口碑好，含自助早餐，服务稳定。距裕后街打车约10分钟，适合追求住宿品质。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:197">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:198">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:199">
+                        <ul data-inspector-id="html:d398bec8:200">
+                            <li data-inspector-id="html:d398bec8:201">国庆务必提前订，亚朵会员/美团常含双早</li>
+                            <li data-inspector-id="html:d398bec8:202">停车场在地下，前台登记车牌</li>
+                        </ul>
+                    </div>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:203">
+                        <button class="nav-pill" onclick="openNav('郴州亚朵酒店市政府五岭大道店')" data-inspector-id="html:d398bec8:204">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:205"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:206"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('郴州亚朵酒店五岭大道')" data-inspector-id="html:d398bec8:207">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:208"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:209"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:210">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/rBBfBh1prr')" data-inspector-id="html:d398bec8:211">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:212">🏨 住宿 · 中档连锁</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:213">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:214">🚗 从西站过来 · 约28分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:215">全季酒店（郴州五岭广场店）</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:216">¥380/晚 · 华住中档 · 干净稳定</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:217">简约干净、性价比介于麓峰和亚朵之间，五岭广场附近吃饭购物方便，适合对连锁品牌有要求又不想花太多。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:218">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:219">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:220">
+                        <ul data-inspector-id="html:d398bec8:221">
+                            <li data-inspector-id="html:d398bec8:222">华住会App和美团比价，常有差价</li>
+                            <li data-inspector-id="html:d398bec8:223">选朝小区一侧更安静</li>
+                        </ul>
+                    </div>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:224">
+                        <button class="nav-pill" onclick="openNav('郴州全季酒店五岭广场')" data-inspector-id="html:d398bec8:225">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:226"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:227"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('郴州全季酒店五岭广场')" data-inspector-id="html:d398bec8:228">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:229"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:230"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip-divider" data-inspector-id="html:d398bec8:231">
+                <span data-inspector-id="html:d398bec8:232">下午 · 二选一</span><div class="line" data-inspector-id="html:d398bec8:233"></div><span data-inspector-id="html:d398bec8:234">傍晚去裕后街</span>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:235">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')" data-inspector-id="html:d398bec8:236">
+                    <span class="card-badge free" data-inspector-id="html:d398bec8:237">📍 可选A · 休闲拍照</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:238">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:239">🚗 从酒店过来 · 约10分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:240">五岭阁</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:241">免费 · 游玩0.5-1小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:242">仿古阁楼建筑，古风出片地。白天登高看市区全景，晚上亮灯后氛围感拉满。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:243">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:244">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:245">
+                        <ul data-inspector-id="html:d398bec8:246">
+                            <li data-inspector-id="html:d398bec8:247">傍晚去最好，日落到亮灯之间最美</li>
+                            <li data-inspector-id="html:d398bec8:248">停车在山下公园停车场，步行上去</li>
+                        </ul>
+                    </div>
+                    <button class="nav-pill secondary" onclick="openNav('郴州五岭阁')" data-inspector-id="html:d398bec8:249">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:250"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:251"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:185">
-                <span data-inspector-id="html:b0e2ff82:186">下午 · 二选一</span><div class="line" data-inspector-id="html:b0e2ff82:187"></div><span data-inspector-id="html:b0e2ff82:188">傍晚去裕后街</span>
-            </div>
-
-            <div class="card" data-inspector-id="html:b0e2ff82:189">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')" data-inspector-id="html:b0e2ff82:190">
-                    <span class="card-badge free" data-inspector-id="html:b0e2ff82:191">📍 可选A · 休闲拍照</span>
+            <div class="card" data-inspector-id="html:d398bec8:252">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/1LS0OVHhez')" data-inspector-id="html:d398bec8:253">
+                    <span class="card-badge spot" data-inspector-id="html:d398bec8:254">📍 可选B · 避暑溶洞</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:192">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:193">🚗 从酒店过来 · 约10分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:194">五岭阁</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:195">免费 · 游玩0.5-1小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:196">仿古阁楼建筑，古风出片地。白天登高看市区全景，晚上亮灯后氛围感拉满。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:197">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:198">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:255">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:256">🚗 从酒店过来 · 约30分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:257">万华岩溶洞</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:258">约¥50/人 · 游玩1.5小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:259">天然空调！洞内常年18℃，钟乳石奇观，溪水贯穿全洞。夏天去超凉快。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:260">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:261">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:199">
-                        <ul data-inspector-id="html:b0e2ff82:200">
-                            <li data-inspector-id="html:b0e2ff82:201">傍晚去最好，日落到亮灯之间最美</li>
-                            <li data-inspector-id="html:b0e2ff82:202">停车在山下公园停车场，步行上去</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:262">
+                        <ul data-inspector-id="html:d398bec8:263">
+                            <li data-inspector-id="html:d398bec8:264">洞内湿滑，穿防滑鞋</li>
+                            <li data-inspector-id="html:d398bec8:265">带件薄外套，洞内比外面低10度</li>
+                            <li data-inspector-id="html:d398bec8:266">跟讲解走，不然看不懂钟乳石</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州五岭阁')" data-inspector-id="html:b0e2ff82:203">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:204"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:205"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州万华岩溶洞')" data-inspector-id="html:d398bec8:267">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:268"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:269"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:206">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/1LS0OVHhez')" data-inspector-id="html:b0e2ff82:207">
-                    <span class="card-badge spot" data-inspector-id="html:b0e2ff82:208">📍 可选B · 避暑溶洞</span>
+            <div class="card" data-inspector-id="html:d398bec8:270">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')" data-inspector-id="html:d398bec8:271">
+                    <span class="card-badge free" data-inspector-id="html:d398bec8:272">📍 可选C · 城市爬山</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:209">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:210">🚗 从酒店过来 · 约30分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:211">万华岩溶洞</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:212">约¥50/人 · 游玩1.5小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:213">天然空调！洞内常年18℃，钟乳石奇观，溪水贯穿全洞。夏天去超凉快。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:214">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:215">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:273">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:274">🚗 从酒店过来 · 约15分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:275">苏仙岭</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:276">约¥40/人 · 游玩2小时 · 城市名山</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:277">郴州市区名山，有"天下第十八福地"之称。山路缓好爬，半山腰有白鹿洞、三绝碑。适合想活动一下但不想跑远的。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:278">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:279">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:216">
-                        <ul data-inspector-id="html:b0e2ff82:217">
-                            <li data-inspector-id="html:b0e2ff82:218">洞内湿滑，穿防滑鞋</li>
-                            <li data-inspector-id="html:b0e2ff82:219">带件薄外套，洞内比外面低10度</li>
-                            <li data-inspector-id="html:b0e2ff82:220">跟讲解走，不然看不懂钟乳石</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:280">
+                        <ul data-inspector-id="html:d398bec8:281">
+                            <li data-inspector-id="html:d398bec8:282">山不高，1小时就能爬到顶</li>
+                            <li data-inspector-id="html:d398bec8:283">可以坐缆车上下，省力</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州万华岩溶洞')" data-inspector-id="html:b0e2ff82:221">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:222"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:223"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州苏仙岭风景区')" data-inspector-id="html:d398bec8:284">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:285"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:286"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:224">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')" data-inspector-id="html:b0e2ff82:225">
-                    <span class="card-badge free" data-inspector-id="html:b0e2ff82:226">📍 可选C · 城市爬山</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:287">
+                <span data-inspector-id="html:d398bec8:288">傍晚</span><div class="line" data-inspector-id="html:d398bec8:289"></div><span data-inspector-id="html:d398bec8:290">裕后街夜景晚餐</span>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:291">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/rzIsW2wDpm')" data-inspector-id="html:d398bec8:292">
+                    <span class="card-badge free" data-inspector-id="html:d398bec8:293">📍 景点 · 免费</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:227">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:228">🚗 从酒店过来 · 约15分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:229">苏仙岭</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:230">约¥40/人 · 游玩2小时 · 城市名山</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:231">郴州市区名山，有"天下第十八福地"之称。山路缓好爬，半山腰有白鹿洞、三绝碑。适合想活动一下但不想跑远的。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:232">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:233">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:294">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:295">🚶 从酒店步行 · 约8分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:296">裕后街</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:297">傍晚-晚上 · 游玩1-2小时 · 免费</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:298">千年古街夜景，灯笼临水倒映，烟火气十足。郴州本地小吃集散地。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:299">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:300">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:234">
-                        <ul data-inspector-id="html:b0e2ff82:235">
-                            <li data-inspector-id="html:b0e2ff82:236">山不高，1小时就能爬到顶</li>
-                            <li data-inspector-id="html:b0e2ff82:237">可以坐缆车上下，省力</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:301">
+                        <ul data-inspector-id="html:d398bec8:302">
+                            <li data-inspector-id="html:d398bec8:303">晚上7点亮灯后最好看</li>
+                            <li data-inspector-id="html:d398bec8:304">主街商业化，巷子里面更有味道</li>
+                            <li data-inspector-id="html:d398bec8:305">周末人多，注意保管随身物品</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州苏仙岭风景区')" data-inspector-id="html:b0e2ff82:238">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:239"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:240"></path></svg>
+                    <button class="nav-pill" onclick="openNav('郴州裕后街')" data-inspector-id="html:d398bec8:306">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:307"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:308"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:241">
-                <span data-inspector-id="html:b0e2ff82:242">傍晚</span><div class="line" data-inspector-id="html:b0e2ff82:243"></div><span data-inspector-id="html:b0e2ff82:244">裕后街夜景晚餐</span>
-            </div>
-
-            <div class="card" data-inspector-id="html:b0e2ff82:245">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/rzIsW2wDpm')" data-inspector-id="html:b0e2ff82:246">
-                    <span class="card-badge free" data-inspector-id="html:b0e2ff82:247">📍 景点 · 免费</span>
+            <div class="card" data-inspector-id="html:d398bec8:309">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')" data-inspector-id="html:d398bec8:310">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:311">🍜 晚餐 · 推荐1</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:248">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:249">🚶 从酒店步行 · 约8分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:250">裕后街</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:251">傍晚-晚上 · 游玩1-2小时 · 免费</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:252">千年古街夜景，灯笼临水倒映，烟火气十足。郴州本地小吃集散地。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:253">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:254">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:312">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:313">🚶 就在裕后街内</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:314">栖凤渡鱼粉</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:315">人均¥20-30 · 郴州非遗招牌</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:316">千年历史，鲜鱼熬底+干辣椒，红汤鲜亮米粉爽滑。郴州人从小吃到大的味道。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:317">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:318">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:255">
-                        <ul data-inspector-id="html:b0e2ff82:256">
-                            <li data-inspector-id="html:b0e2ff82:257">晚上7点亮灯后最好看</li>
-                            <li data-inspector-id="html:b0e2ff82:258">主街商业化，巷子里面更有味道</li>
-                            <li data-inspector-id="html:b0e2ff82:259">周末人多，注意保管随身物品</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:319">
+                        <ul data-inspector-id="html:d398bec8:320">
+                            <li data-inspector-id="html:d398bec8:321">不能吃辣提前说"微辣"，默认很辣</li>
+                            <li data-inspector-id="html:d398bec8:322">加煎蛋是标配，本地人都这么吃</li>
+                            <li data-inspector-id="html:d398bec8:323">选满座的老店，别选装修太新的</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州裕后街')" data-inspector-id="html:b0e2ff82:260">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:261"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:262"></path></svg>
-                        导航前往
+                    <button class="meituan-pill" onclick="openMeituan('郴州裕后街栖凤渡鱼粉')" data-inspector-id="html:d398bec8:324">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:325"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:326"></path></svg>
+                        美团找店
                     </button>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:263">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')" data-inspector-id="html:b0e2ff82:264">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:265">🍜 晚餐 · 推荐1</span>
+            <div class="card" data-inspector-id="html:d398bec8:327">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')" data-inspector-id="html:d398bec8:328">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:329">🍜 晚餐 · 推荐2</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:266">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:267">🚶 就在裕后街内</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:268">栖凤渡鱼粉</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:269">人均¥20-30 · 郴州非遗招牌</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:270">千年历史，鲜鱼熬底+干辣椒，红汤鲜亮米粉爽滑。郴州人从小吃到大的味道。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:271">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:272">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:330">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:331">🚶 就在裕后街内</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:332">郴州砍肉粉</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:333">人均¥15-25 · 现砍现煮</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:334">猪肉现点现砍，骨汤熬底，米粉配酸豆角、花生米。汤鲜不辣，适合不吃辣的。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:335">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:336">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:273">
-                        <ul data-inspector-id="html:b0e2ff82:274">
-                            <li data-inspector-id="html:b0e2ff82:275">不能吃辣提前说"微辣"，默认很辣</li>
-                            <li data-inspector-id="html:b0e2ff82:276">加煎蛋是标配，本地人都这么吃</li>
-                            <li data-inspector-id="html:b0e2ff82:277">选满座的老店，别选装修太新的</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:337">
+                        <ul data-inspector-id="html:d398bec8:338">
+                            <li data-inspector-id="html:d398bec8:339">早上最新鲜，晚上去肉可能不新鲜</li>
+                            <li data-inspector-id="html:d398bec8:340">加酸豆角和花生米是灵魂</li>
                         </ul>
                     </div>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 砍肉粉')" data-inspector-id="html:d398bec8:341">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:342"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:343"></path></svg>
+                        美团找店
+                    </button>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:278">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')" data-inspector-id="html:b0e2ff82:279">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:280">🍜 晚餐 · 推荐2</span>
+            <div class="card" data-inspector-id="html:d398bec8:344">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')" data-inspector-id="html:d398bec8:345">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:346">🍗 晚餐 · 推荐3</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:281">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:282">🚶 就在裕后街内</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:283">郴州砍肉粉</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:284">人均¥15-25 · 现砍现煮</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:285">猪肉现点现砍，骨汤熬底，米粉配酸豆角、花生米。汤鲜不辣，适合不吃辣的。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:286">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:287">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:347">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:348">🚶 市区湘菜馆 · 打车约10分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:349">嘉禾血鸭</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:350">人均¥60-80 · 湘南名菜</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:351">子姜炒血鸭，鸭血裹住每块鸭肉，香辣入味。郴州硬菜代表，配米饭绝了。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:352">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:353">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:288">
-                        <ul data-inspector-id="html:b0e2ff82:289">
-                            <li data-inspector-id="html:b0e2ff82:290">早上最新鲜，晚上去肉可能不新鲜</li>
-                            <li data-inspector-id="html:b0e2ff82:291">加酸豆角和花生米是灵魂</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:354">
+                        <ul data-inspector-id="html:d398bec8:355">
+                            <li data-inspector-id="html:d398bec8:356">现杀现做要等30分钟</li>
+                            <li data-inspector-id="html:d398bec8:357">找湘菜馆子点，粉店没有</li>
+                            <li data-inspector-id="html:d398bec8:358">分量大，一家三口点半份够吃</li>
                         </ul>
                     </div>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 嘉禾血鸭')" data-inspector-id="html:d398bec8:359">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:360"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:361"></path></svg>
+                        美团找店
+                    </button>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:292">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')" data-inspector-id="html:b0e2ff82:293">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:294">🍗 晚餐 · 推荐3</span>
+            <div class="card" data-inspector-id="html:d398bec8:362">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/mHsvW0IIrr')" data-inspector-id="html:d398bec8:363">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:364">🍲 晚餐 · 推荐4</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:295">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:296">🚶 市区餐馆 · 打车约10分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:297">嘉禾血鸭</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:298">人均¥60-80 · 湘南名菜</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:299">子姜炒血鸭，鸭血裹住每块鸭肉，香辣入味。郴州硬菜代表，配米饭绝了。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:300">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:301">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:365">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:366">🚶 市区湘菜馆 · 打车约10分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:367">栖凤渡烧鸡公</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:368">人均¥70-90 · 栖凤渡另一头牌</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:369">茶油烧散养土鸡，香辣浓郁、越煮越入味，比血鸭更重口，是栖凤渡镇和鱼粉齐名的招牌。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:370">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:371">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:302">
-                        <ul data-inspector-id="html:b0e2ff82:303">
-                            <li data-inspector-id="html:b0e2ff82:304">这道菜现杀现做，要等30分钟</li>
-                            <li data-inspector-id="html:b0e2ff82:305">找湘菜馆子点，裕后街里的粉店没有</li>
-                            <li data-inspector-id="html:b0e2ff82:306">分量大，一家三口点半份够吃</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:372">
+                        <ul data-inspector-id="html:d398bec8:373">
+                            <li data-inspector-id="html:d398bec8:374">选散养土鸡，现炒要等20分钟</li>
+                            <li data-inspector-id="html:d398bec8:375">越煮越咸，最后可下粉条/面条</li>
+                            <li data-inspector-id="html:d398bec8:376">人多点整只，人少点半只</li>
                         </ul>
                     </div>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 烧鸡公')" data-inspector-id="html:d398bec8:377">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:378"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:379"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:380">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/2hLsFsfAdH')" data-inspector-id="html:d398bec8:381">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:382">🍡 小吃 · 逛街零嘴</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:383">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:384">🚶 裕后街/市区小吃店</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:385">桂东黄糍粑</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:386">人均¥10-15 · 桂东非遗小吃</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:387">桂东特产黄元米果，煎到外脆里糯、蘸糖吃，香甜Q弹。逛街当零食，孩子特别爱吃。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:388">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:389">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:390">
+                        <ul data-inspector-id="html:d398bec8:391">
+                            <li data-inspector-id="html:d398bec8:392">现煎的最好吃，放凉会硬</li>
+                            <li data-inspector-id="html:d398bec8:393">也有蒸/炒咸口，可都试试</li>
+                        </ul>
+                    </div>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 桂东黄糍粑')" data-inspector-id="html:d398bec8:394">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:395"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:396"></path></svg>
+                        美团找店
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ====== Day 2 ====== -->
-    <div class="day-panel" id="day-2" data-inspector-id="html:b0e2ff82:307">
-        <div class="card-list" data-inspector-id="html:b0e2ff82:308">
-            <div class="card" data-inspector-id="html:b0e2ff82:309">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')" data-inspector-id="html:b0e2ff82:310">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:311">🍜 早餐 · 选项1</span>
+    <div class="day-panel" id="day-2" data-inspector-id="html:d398bec8:397">
+        <div class="card-list" data-inspector-id="html:d398bec8:398">
+            <div class="card" data-inspector-id="html:d398bec8:399">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')" data-inspector-id="html:d398bec8:400">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:401">🍜 早餐 · 选项1</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:312">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:313">🚶 从酒店步行 · 酒店附近</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:314">栖凤渡鱼粉</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:315">人均¥15-20 · 郴州人早餐标配</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:316">昨晚没吃够的早上再来一碗，鲜辣红汤唤醒一天。吃饱喝足出发仰天湖。</p>
-                </div>
-            </div>
-
-            <div class="card" data-inspector-id="html:b0e2ff82:317">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Sa9OaLnXwc')" data-inspector-id="html:b0e2ff82:318">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:319">🍜 早餐 · 选项2</span>
-                </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:320">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:321">🚶 从酒店步行 · 酒店附近</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:322">清汤砍肉粉</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:323">人均¥12-18 · 不辣版</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:324">不吃辣就选这个，骨汤鲜肉，撒葱花，清淡鲜美好消化。适合上山前吃。</p>
-                </div>
-            </div>
-
-            <div class="card" data-inspector-id="html:b0e2ff82:325">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')" data-inspector-id="html:b0e2ff82:326">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:327">🥟 早餐 · 选项3</span>
-                </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:328">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:329">🚶 从酒店步行 · 酒店附近</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:330">杀猪粉+油条</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:331">人均¥15 · 永州风味</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:332">永州杀猪粉也很有名，猪血+猪肉+荷包蛋，配根油条蘸汤，饱肚一上午。</p>
-                </div>
-            </div>
-
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:333">
-                <span data-inspector-id="html:b0e2ff82:334">车程约1.5小时</span><div class="line" data-inspector-id="html:b0e2ff82:335"></div><span data-inspector-id="html:b0e2ff82:336">盘山公路慢行</span>
-            </div>
-
-            <div class="card" data-inspector-id="html:b0e2ff82:337">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8TYkHPOHRM')" data-inspector-id="html:b0e2ff82:338">
-                    <span class="card-badge spot" data-inspector-id="html:b0e2ff82:339">📍 核心景点</span>
-                </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:340">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:341">🚗 从市区早餐处 · 约1.5小时</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:342">仰天湖大草原</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:343">¥120/人 · 游玩3.5-4小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:344">南方呼伦贝尔，海拔1314米高山草原。打卡风车山脊、霍比特小屋、湖边栈道、喂小鹿。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:345">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:346">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:402">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:403">🚶 从酒店步行 · 酒店附近</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:404">栖凤渡鱼粉</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:405">人均¥15-20 · 郴州人早餐标配</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:406">昨晚没吃够的早上再来一碗，鲜辣红汤唤醒一天。吃饱喝足出发仰天湖。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 栖凤渡鱼粉')" data-inspector-id="html:d398bec8:407">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:408"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:409"></path></svg>
+                        美团找店
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:347">
-                        <ul data-inspector-id="html:b0e2ff82:348">
-                            <li data-inspector-id="html:b0e2ff82:349">山上比山下低5-8℃，必带薄外套</li>
-                            <li data-inspector-id="html:b0e2ff82:350">盘山弯道多，容易晕车提前吃药</li>
-                            <li data-inspector-id="html:b0e2ff82:351">骑马按圈收费，问清价格再骑</li>
-                            <li data-inspector-id="html:b0e2ff82:352">景区内水和吃的贵，自带干粮</li>
-                            <li data-inspector-id="html:b0e2ff82:353">国庆人多，建议早8点前进景区</li>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:410">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Sa9OaLnXwc')" data-inspector-id="html:d398bec8:411">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:412">🍜 早餐 · 选项2</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:413">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:414">🚶 从酒店步行 · 酒店附近</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:415">清汤砍肉粉</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:416">人均¥12-18 · 不辣版</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:417">不吃辣就选这个，骨汤鲜肉，撒葱花，清淡鲜美好消化。适合上山前吃。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 砍肉粉')" data-inspector-id="html:d398bec8:418">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:419"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:420"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:421">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')" data-inspector-id="html:d398bec8:422">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:423">🥟 早餐 · 选项3</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:424">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:425">🚶 从酒店步行 · 酒店附近</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:426">杀猪粉+油条</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:427">人均¥15 · 永州风味</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:428">永州杀猪粉也很有名，猪血+猪肉+荷包蛋，配根油条蘸汤，饱肚一上午。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 杀猪粉')" data-inspector-id="html:d398bec8:429">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:430"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:431"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+
+            <div class="trip-divider" data-inspector-id="html:d398bec8:432">
+                <span data-inspector-id="html:d398bec8:433">车程约1.5小时</span><div class="line" data-inspector-id="html:d398bec8:434"></div><span data-inspector-id="html:d398bec8:435">盘山公路慢行</span>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:436">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8TYkHPOHRM')" data-inspector-id="html:d398bec8:437">
+                    <span class="card-badge spot" data-inspector-id="html:d398bec8:438">📍 核心景点</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:439">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:440">🚗 从市区早餐处 · 约1.5小时</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:441">仰天湖大草原</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:442">¥120/人 · 游玩3.5-4小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:443">南方呼伦贝尔，海拔1314米高山草原。打卡风车山脊、霍比特小屋、湖边栈道、喂小鹿。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:444">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:445">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:446">
+                        <ul data-inspector-id="html:d398bec8:447">
+                            <li data-inspector-id="html:d398bec8:448">山上比山下低5-8℃，必带薄外套</li>
+                            <li data-inspector-id="html:d398bec8:449">盘山弯道多，容易晕车提前吃药</li>
+                            <li data-inspector-id="html:d398bec8:450">骑马按圈收费，问清价格再骑</li>
+                            <li data-inspector-id="html:d398bec8:451">景区内水和吃的贵，自带干粮</li>
+                            <li data-inspector-id="html:d398bec8:452">国庆人多，建议早8点前进景区</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州仰天湖大草原')" data-inspector-id="html:b0e2ff82:354">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:355"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:356"></path></svg>
+                    <button class="nav-pill" onclick="openNav('郴州仰天湖大草原')" data-inspector-id="html:d398bec8:453">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:454"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:455"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:357">
-                <span data-inspector-id="html:b0e2ff82:358">15:30下山</span><div class="line" data-inspector-id="html:b0e2ff82:359"></div><span data-inspector-id="html:b0e2ff82:360">车程1小时到东江镇</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:456">
+                <span data-inspector-id="html:d398bec8:457">15:30下山</span><div class="line" data-inspector-id="html:d398bec8:458"></div><span data-inspector-id="html:d398bec8:459">车程1小时到东江镇</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:361">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8I2lXx53VV')" data-inspector-id="html:b0e2ff82:362">
-                    <span class="card-badge hotel" data-inspector-id="html:b0e2ff82:363">🏨 住宿</span>
+            <div class="card" data-inspector-id="html:d398bec8:460">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8I2lXx53VV')" data-inspector-id="html:d398bec8:461">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:462">🏨 住宿</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:364">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:365">🚗 从仰天湖下山 · 约1小时</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:366">顺源酒店（东江湖景区门楼店）</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:367">¥360/晚 · 离景区大门仅260米</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:368">离东江湖最近的高性价比酒店，第二天看晨雾可以多睡半小时。停车免费。升级备选：泊漫酒店江景房约¥600/晚。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:369">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:370">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:463">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:464">🚗 从仰天湖下山 · 约1小时</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:465">顺源酒店（东江湖景区门楼店）</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:466">¥360/晚 · 离景区大门仅260米</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:467">离东江湖最近的高性价比酒店，第二天看晨雾可以多睡半小时。停车免费。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:468">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:469">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:371">
-                        <ul data-inspector-id="html:b0e2ff82:372">
-                            <li data-inspector-id="html:b0e2ff82:373">看晨雾住这最值，走路3分钟到景区</li>
-                            <li data-inspector-id="html:b0e2ff82:374">国庆一定要提前订，周末都满房</li>
-                            <li data-inspector-id="html:b0e2ff82:375">晚上周边吃饭的店不多，提前点</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:470">
+                        <ul data-inspector-id="html:d398bec8:471">
+                            <li data-inspector-id="html:d398bec8:472">看晨雾住这最值，走路3分钟到景区</li>
+                            <li data-inspector-id="html:d398bec8:473">国庆一定要提前订，周末都满房</li>
+                            <li data-inspector-id="html:d398bec8:474">晚上周边吃饭的店不多，提前点</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州顺源酒店东江湖景区门楼店')" data-inspector-id="html:b0e2ff82:376">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:377"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:378"></path></svg>
-                        导航前往
-                    </button>
-                </div>
-            </div>
-
-            <div class="card" data-inspector-id="html:b0e2ff82:379">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/uj1PtlGOut')" data-inspector-id="html:b0e2ff82:380">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:381">🐟 晚餐 · 必点1</span>
-                </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:382">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:383">🚗 从酒店过来 · 约5分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:384">东江清水鱼</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:385">人均¥60-80 · 现捞现做</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:386">东江湖现捞三角鲂，清蒸最鲜。一鱼两吃：清蒸一半、鱼汤另一半。选门口有鱼池的店。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:387">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:388">▾</span>
-                    </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:389">
-                        <ul data-inspector-id="html:b0e2ff82:390">
-                            <li data-inspector-id="html:b0e2ff82:391">清水鱼按斤卖，先问价再称</li>
-                            <li data-inspector-id="html:b0e2ff82:392">国庆晚上人多，提前去不然排队</li>
-                            <li data-inspector-id="html:b0e2ff82:393">选门口有活鱼池的店，保证新鲜</li>
-                        </ul>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:475">
+                        <button class="nav-pill" onclick="openNav('郴州顺源酒店东江湖景区门楼店')" data-inspector-id="html:d398bec8:476">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:477"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:478"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('资兴顺源酒店东江湖景区门楼')" data-inspector-id="html:d398bec8:479">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:480"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:481"></path></svg>
+                            美团订房
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:394">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')" data-inspector-id="html:b0e2ff82:395">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:396">🍗 晚餐 · 必点2</span>
+            <div class="card" data-inspector-id="html:d398bec8:482">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/eDVAltzLnC')" data-inspector-id="html:d398bec8:483">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:484">🏨 住宿 · 江景中档</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:397">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:398">🚗 从酒店过来 · 约5分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:399">嘉禾血鸭</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:400">人均¥50-70 · 湘南硬菜</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:401">农家菜馆基本都有，子姜炒鸭血裹鸭，香辣下饭。配白米饭能吃三碗。</p>
+                <div class="card-body" data-inspector-id="html:d398bec8:485">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:486">🚗 从仰天湖下山 · 约1小时</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:487">心泊酒店（资兴东江湖店）</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:488">¥480/晚 · 江景阳台房</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:489">部分房间推窗见湖，江景阳台适合度假拍照。距景区门楼车程约5分钟，比顺源稍远但景观更好。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:490">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:491">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:492">
+                        <ul data-inspector-id="html:d398bec8:493">
+                            <li data-inspector-id="html:d398bec8:494">订房前确认是"江景房"，园景房看不到湖</li>
+                            <li data-inspector-id="html:d398bec8:495">高层江景房视野最佳</li>
+                        </ul>
+                    </div>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:496">
+                        <button class="nav-pill" onclick="openNav('资兴心泊酒店东江湖店')" data-inspector-id="html:d398bec8:497">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:498"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:499"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('资兴心泊酒店东江湖')" data-inspector-id="html:d398bec8:500">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:501"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:502"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:402">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/6eFHpts73y')" data-inspector-id="html:b0e2ff82:403">
-                    <span class="card-badge food" data-inspector-id="html:b0e2ff82:404">🥬 晚餐 · 必点3</span>
+            <div class="card" data-inspector-id="html:d398bec8:503">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jw7hd0vTWv')" data-inspector-id="html:d398bec8:504">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:505">🏨 住宿 · 江景度假</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:405">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:406">🚗 从酒店过来 · 约5分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:407">土腊肉炒笋</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:408">人均¥30-40 · 山货特色</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:409">东江镇山里的冬笋/春笋炒农家自制腊肉，咸香下饭。当地农家菜必点素菜。</p>
+                <div class="card-body" data-inspector-id="html:d398bec8:506">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:507">🚗 从仰天湖下山 · 约1小时</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:508">东江湖泊漫酒店</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:509">¥600/晚 · 湖畔庭院 · 高端度假</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:510">湖畔庭院式度假酒店，阳台直面江景、环境安静，适合想要度假感、预算充足的。看雾季一房难求。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:511">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:512">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:513">
+                        <ul data-inspector-id="html:d398bec8:514">
+                            <li data-inspector-id="html:d398bec8:515">国庆江景房最抢手，至少提前2周</li>
+                            <li data-inspector-id="html:d398bec8:516">含早房更划算，周边早餐店少</li>
+                        </ul>
+                    </div>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:517">
+                        <button class="nav-pill" onclick="openNav('郴州东江湖泊漫酒店')" data-inspector-id="html:d398bec8:518">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:519"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:520"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('郴州东江湖泊漫酒店')" data-inspector-id="html:d398bec8:521">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:522"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:523"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:524">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/uj1PtlGOut')" data-inspector-id="html:d398bec8:525">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:526">🐟 晚餐 · 必点1</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:527">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:528">🚗 从酒店过来 · 约5分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:529">东江清水鱼</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:530">人均¥60-80 · 现捞现做</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:531">东江湖现捞三角鲂，清蒸最鲜。一鱼两吃：清蒸一半、鱼汤另一半。选门口有鱼池的店。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:532">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:533">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:534">
+                        <ul data-inspector-id="html:d398bec8:535">
+                            <li data-inspector-id="html:d398bec8:536">清水鱼按斤卖，先问价再称</li>
+                            <li data-inspector-id="html:d398bec8:537">国庆晚上人多，提前去不然排队</li>
+                            <li data-inspector-id="html:d398bec8:538">选门口有活鱼池的店，保证新鲜</li>
+                        </ul>
+                    </div>
+                    <button class="meituan-pill" onclick="openMeituan('资兴东江湖 清水鱼')" data-inspector-id="html:d398bec8:539">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:540"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:541"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:542">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')" data-inspector-id="html:d398bec8:543">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:544">🍗 晚餐 · 必点2</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:545">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:546">🚗 从酒店过来 · 约5分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:547">嘉禾血鸭</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:548">人均¥50-70 · 湘南硬菜</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:549">农家菜馆基本都有，子姜炒鸭血裹鸭，香辣下饭。配白米饭能吃三碗。</p>
+                    <button class="meituan-pill" onclick="openMeituan('资兴 嘉禾血鸭')" data-inspector-id="html:d398bec8:550">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:551"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:552"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:553">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/UH5t9EadOo')" data-inspector-id="html:d398bec8:554">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:555">🥬 晚餐 · 必点3</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:556">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:557">🚗 从酒店过来 · 约5分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:558">土腊肉炒笋</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:559">人均¥30-40 · 山货特色</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:560">山里冬笋/春笋炒农家自制腊肉，咸香下饭、锅气十足，当地农家菜必点的素菜。</p>
+                    <button class="meituan-pill" onclick="openMeituan('资兴东江湖 农家菜')" data-inspector-id="html:d398bec8:561">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:562"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:563"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:564">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/g1OTv5rSlO')" data-inspector-id="html:d398bec8:565">
+                    <span class="card-badge food" data-inspector-id="html:d398bec8:566">🥩 晚餐 · 必点4</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:567">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:568">🚗 从酒店过来 · 约5分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:569">湖南米粉肉</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:570">人均¥40-55 · 农家蒸菜</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:571">五花肉裹粗米粉蒸到软烂，肥而不腻、米香浓郁，老人小孩都能吃，农家菜馆常见。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:572">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:573">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:574">
+                        <ul data-inspector-id="html:d398bec8:575">
+                            <li data-inspector-id="html:d398bec8:576">蒸菜出餐慢，建议和鱼一起先点</li>
+                            <li data-inspector-id="html:d398bec8:577">偏软糯，人少可以半份</li>
+                        </ul>
+                    </div>
+                    <button class="meituan-pill" onclick="openMeituan('资兴 米粉肉')" data-inspector-id="html:d398bec8:578">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:579"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:580"></path></svg>
+                        美团找店
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ====== Day 3 ====== -->
-    <div class="day-panel" id="day-3" data-inspector-id="html:b0e2ff82:410">
-        <div class="card-list" data-inspector-id="html:b0e2ff82:411">
-            <div class="card" data-inspector-id="html:b0e2ff82:412">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')" data-inspector-id="html:b0e2ff82:413">
-                    <span class="card-badge spot" data-inspector-id="html:b0e2ff82:414">📍 重中之重 · 清晨</span>
+    <div class="day-panel" id="day-3" data-inspector-id="html:d398bec8:581">
+        <div class="card-list" data-inspector-id="html:d398bec8:582">
+            <div class="card" data-inspector-id="html:d398bec8:583">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')" data-inspector-id="html:d398bec8:584">
+                    <span class="card-badge spot" data-inspector-id="html:d398bec8:585">📍 重中之重 · 清晨</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:415">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:416">🚶 从酒店步行 · 约3分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:417">雾漫小东江</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:418">¥85/人 · 6:00-9:00最佳 · 游玩2.5小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:419">水墨仙境！清晨江面薄雾弥漫，渔夫撒网名场面。2号观景台是最佳拍摄点，晚了雾散就看不到了。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:420">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:421">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:586">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:587">🚶 从酒店步行 · 约3分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:588">雾漫小东江</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:589">¥85/人 · 6:00-9:00最佳 · 游玩2.5小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:590">水墨仙境！清晨江面薄雾弥漫，渔夫撒网名场面。2号观景台是最佳拍摄点，晚了雾散就看不到了。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:591">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:592">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:422">
-                        <ul data-inspector-id="html:b0e2ff82:423">
-                            <li data-inspector-id="html:b0e2ff82:424">必须6点前到2号观景台，占不到好位置</li>
-                            <li data-inspector-id="html:b0e2ff82:425">买观湖套票，别买单门票，走不进去</li>
-                            <li data-inspector-id="html:b0e2ff82:426">渔夫撒网一般在7点和8点各一场</li>
-                            <li data-inspector-id="html:b0e2ff82:427">清晨江边凉，带外套</li>
-                            <li data-inspector-id="html:b0e2ff82:428">国庆人巨多，提前一天在官方公众号预约</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:593">
+                        <ul data-inspector-id="html:d398bec8:594">
+                            <li data-inspector-id="html:d398bec8:595">必须6点前到2号观景台，占不到好位置</li>
+                            <li data-inspector-id="html:d398bec8:596">买观湖套票，别买单门票，走不进去</li>
+                            <li data-inspector-id="html:d398bec8:597">渔夫撒网一般在7点和8点各一场</li>
+                            <li data-inspector-id="html:d398bec8:598">清晨江边凉，带外套</li>
+                            <li data-inspector-id="html:d398bec8:599">国庆人巨多，提前一天在官方公众号预约</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州东江湖风景区')" data-inspector-id="html:b0e2ff82:429">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:430"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:431"></path></svg>
+                    <button class="nav-pill" onclick="openNav('郴州东江湖风景区')" data-inspector-id="html:d398bec8:600">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:601"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:602"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:432">
-                <span data-inspector-id="html:b0e2ff82:433">回酒店补觉</span><div class="line" data-inspector-id="html:b0e2ff82:434"></div><span data-inspector-id="html:b0e2ff82:435">车程30分钟到白廊</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:603">
+                <span data-inspector-id="html:d398bec8:604">回酒店补觉</span><div class="line" data-inspector-id="html:d398bec8:605"></div><span data-inspector-id="html:d398bec8:606">车程30分钟到白廊</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:436">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/CrAQGFSIMg')" data-inspector-id="html:b0e2ff82:437">
-                    <span class="card-badge free" data-inspector-id="html:b0e2ff82:438">📍 免费 · 环湖自驾</span>
+            <div class="card" data-inspector-id="html:d398bec8:607">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/CrAQGFSIMg')" data-inspector-id="html:d398bec8:608">
+                    <span class="card-badge free" data-inspector-id="html:d398bec8:609">📍 免费 · 环湖自驾</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:439">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:440">🚗 从小东江景区 · 约30分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:441">白廊环湖公路</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:442">免费 · 游玩1-2小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:443">郴州小洱海，12.4公里环湖公路，湖面开阔人少。自驾兜风随停随拍，也可租小电驴环湖。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:444">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:445">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:610">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:611">🚗 从小东江景区 · 约30分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:612">白廊环湖公路</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:613">免费 · 游玩1-2小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:614">郴州小洱海，12.4公里环湖公路，湖面开阔人少。自驾兜风随停随拍，也可租小电驴环湖。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:615">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:616">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:446">
-                        <ul data-inspector-id="html:b0e2ff82:447">
-                            <li data-inspector-id="html:b0e2ff82:448">沿途有多个观景停车点，别在路边乱停</li>
-                            <li data-inspector-id="html:b0e2ff82:449">下午光线好，湖面反光出片</li>
-                            <li data-inspector-id="html:b0e2ff82:450">租电驴注意电量，环湖一圈要2小时</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:617">
+                        <ul data-inspector-id="html:d398bec8:618">
+                            <li data-inspector-id="html:d398bec8:619">沿途有多个观景停车点，别在路边乱停</li>
+                            <li data-inspector-id="html:d398bec8:620">下午光线好，湖面反光出片</li>
+                            <li data-inspector-id="html:d398bec8:621">租电驴注意电量，环湖一圈要2小时</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州白廊景区')" data-inspector-id="html:b0e2ff82:451">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:452"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:453"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州白廊景区')" data-inspector-id="html:d398bec8:622">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:623"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:624"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:454">
-                <span data-inspector-id="html:b0e2ff82:455">车程约1小时</span><div class="line" data-inspector-id="html:b0e2ff82:456"></div><span data-inspector-id="html:b0e2ff82:457">飞天山</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:625">
+                <span data-inspector-id="html:d398bec8:626">车程约1小时</span><div class="line" data-inspector-id="html:d398bec8:627"></div><span data-inspector-id="html:d398bec8:628">飞天山</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:458">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/nY4mziBHqV')" data-inspector-id="html:b0e2ff82:459">
-                    <span class="card-badge spot" data-inspector-id="html:b0e2ff82:460">📍 竹筏丹霞</span>
+            <div class="card" data-inspector-id="html:d398bec8:629">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/nY4mziBHqV')" data-inspector-id="html:d398bec8:630">
+                    <span class="card-badge spot" data-inspector-id="html:d398bec8:631">📍 竹筏丹霞</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:461">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:462">🚗 从白廊景区 · 约1小时</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:463">飞天山</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:464">¥118/人（含竹筏）· 游玩1.5小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:465">坐竹筏顺翠江而下，看丹霞绝壁、千年悬棺，红岩碧水。轻松不累，下午光线柔和拍照好看。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:466">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:467">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:632">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:633">🚗 从白廊景区 · 约1小时</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:634">飞天山</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:635">¥118/人（含竹筏）· 游玩1.5小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:636">坐竹筏顺翠江而下，看丹霞绝壁、千年悬棺，红岩碧水。轻松不累，下午光线柔和拍照好看。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:637">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:638">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:468">
-                        <ul data-inspector-id="html:b0e2ff82:469">
-                            <li data-inspector-id="html:b0e2ff82:470">一定要买含竹筏的套票，步行爬很热</li>
-                            <li data-inspector-id="html:b0e2ff82:471">竹筏单程，下筏后走一段才能回到入口</li>
-                            <li data-inspector-id="html:b0e2ff82:472">戴帽子，江面无遮挡很晒</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:639">
+                        <ul data-inspector-id="html:d398bec8:640">
+                            <li data-inspector-id="html:d398bec8:641">一定要买含竹筏的套票，步行爬很热</li>
+                            <li data-inspector-id="html:d398bec8:642">竹筏单程，下筏后走一段才能回到入口</li>
+                            <li data-inspector-id="html:d398bec8:643">戴帽子，江面无遮挡很晒</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州飞天山风景区')" data-inspector-id="html:b0e2ff82:473">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:474"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:475"></path></svg>
+                    <button class="nav-pill" onclick="openNav('郴州飞天山风景区')" data-inspector-id="html:d398bec8:644">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:645"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:646"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:476">
-                <span data-inspector-id="html:b0e2ff82:477">想避开人群？</span><div class="line" data-inspector-id="html:b0e2ff82:478"></div><span data-inspector-id="html:b0e2ff82:479">可跳过飞天山</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:647">
+                <span data-inspector-id="html:d398bec8:648">想避开人群？</span><div class="line" data-inspector-id="html:d398bec8:649"></div><span data-inspector-id="html:d398bec8:650">可跳过飞天山</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:480">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/yEfv2rhyHY')" data-inspector-id="html:b0e2ff82:481">
-                    <span class="card-badge free" data-inspector-id="html:b0e2ff82:482">📍 备选 · 免费工业风</span>
+            <div class="card" data-inspector-id="html:d398bec8:651">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/yEfv2rhyHY')" data-inspector-id="html:d398bec8:652">
+                    <span class="card-badge free" data-inspector-id="html:d398bec8:653">📍 备选 · 免费工业风</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:483">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:484">🚗 从白廊景区 · 约50分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:485">711时光小镇</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:486">免费 · 游玩1-1.5小时 · 复古工业风</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:487">由老矿区改造的复古文创小镇，国营711矿大门出片率极高，红砖厂房+红星标语，怀旧风拍照超有感觉。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:488">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:489">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:654">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:655">🚗 从白廊景区 · 约50分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:656">711时光小镇</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:657">免费 · 游玩1-1.5小时 · 复古工业风</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:658">由老矿区改造的复古文创小镇，国营711矿大门出片率极高，红砖厂房+红星标语，怀旧风拍照超有感觉。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:659">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:660">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:490">
-                        <ul data-inspector-id="html:b0e2ff82:491">
-                            <li data-inspector-id="html:b0e2ff82:492">穿素色衣服拍照更搭工业风</li>
-                            <li data-inspector-id="html:b0e2ff82:493">小镇不大，1小时足够逛完</li>
-                            <li data-inspector-id="html:b0e2ff82:494">里面没什么吃的，自带水</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:661">
+                        <ul data-inspector-id="html:d398bec8:662">
+                            <li data-inspector-id="html:d398bec8:663">穿素色衣服拍照更搭工业风</li>
+                            <li data-inspector-id="html:d398bec8:664">小镇不大，1小时足够逛完</li>
+                            <li data-inspector-id="html:d398bec8:665">里面没什么吃的，自带水</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州711时光小镇')" data-inspector-id="html:b0e2ff82:495">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:496"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:497"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州711时光小镇')" data-inspector-id="html:d398bec8:666">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:667"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:668"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:498">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oTBOMgkwRx')" data-inspector-id="html:b0e2ff82:499">
-                    <span class="card-badge spot" data-inspector-id="html:b0e2ff82:500">📍 备选C · 明清古村</span>
+            <div class="card" data-inspector-id="html:d398bec8:669">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oTBOMgkwRx')" data-inspector-id="html:d398bec8:670">
+                    <span class="card-badge spot" data-inspector-id="html:d398bec8:671">📍 备选C · 明清古村</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:501">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:502">🚗 从白廊景区 · 约1小时</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:503">板梁古村</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:504">约¥50/人 · 游玩1.5小时 · 3A景区</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:505">湘南保存最完好的明清古村落，青砖灰瓦、祠堂古井、石板巷。比江南古村人少，原生态。拍照很出片。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:506">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:507">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:672">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:673">🚗 从白廊景区 · 约1小时</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:674">板梁古村</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:675">约¥50/人 · 游玩1.5小时 · 3A景区</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:676">湘南保存最完好的明清古村落，青砖灰瓦、祠堂古井、石板巷。比江南古村人少，原生态。拍照很出片。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:677">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:678">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:508">
-                        <ul data-inspector-id="html:b0e2ff82:509">
-                            <li data-inspector-id="html:b0e2ff82:510">古村不大，1.5小时足够逛完</li>
-                            <li data-inspector-id="html:b0e2ff82:511">门口有导游讲解，建议请一个</li>
-                            <li data-inspector-id="html:b0e2ff82:512">村内有本地居民生活，注意不要打扰</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:679">
+                        <ul data-inspector-id="html:d398bec8:680">
+                            <li data-inspector-id="html:d398bec8:681">古村不大，1.5小时足够逛完</li>
+                            <li data-inspector-id="html:d398bec8:682">门口有导游讲解，建议请一个</li>
+                            <li data-inspector-id="html:d398bec8:683">村内有本地居民生活，注意不要打扰</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州板梁古村')" data-inspector-id="html:b0e2ff82:513">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:514"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:515"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州板梁古村')" data-inspector-id="html:d398bec8:684">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:685"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:686"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:516">
-                <span data-inspector-id="html:b0e2ff82:517">车程10分钟</span><div class="line" data-inspector-id="html:b0e2ff82:518"></div><span data-inspector-id="html:b0e2ff82:519">马皇丘（顺路免费打卡）</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:687">
+                <span data-inspector-id="html:d398bec8:688">车程10分钟</span><div class="line" data-inspector-id="html:d398bec8:689"></div><span data-inspector-id="html:d398bec8:690">马皇丘（顺路免费打卡）</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:520">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oZ3SfkpsFL')" data-inspector-id="html:b0e2ff82:521">
-                    <span class="card-badge free" data-inspector-id="html:b0e2ff82:522">📍 免费 · 日落</span>
+            <div class="card" data-inspector-id="html:d398bec8:691">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oZ3SfkpsFL')" data-inspector-id="html:d398bec8:692">
+                    <span class="card-badge free" data-inspector-id="html:d398bec8:693">📍 免费 · 日落</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:523">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:524">🚗 从飞天山 · 约10分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:525">马皇丘大峡谷</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:526">免费 · 游玩1小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:527">免费丹霞，网红S弯公路，媲美高椅岭，几乎没有旅行团。日落光影绝佳。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:528">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:529">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:694">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:695">🚗 从飞天山 · 约10分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:696">马皇丘大峡谷</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:697">免费 · 游玩1小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:698">免费丹霞，网红S弯公路，媲美高椅岭，几乎没有旅行团。日落光影绝佳。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:699">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:700">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:530">
-                        <ul data-inspector-id="html:b0e2ff82:531">
-                            <li data-inspector-id="html:b0e2ff82:532">公路上拍照注意来车，别站路中间</li>
-                            <li data-inspector-id="html:b0e2ff82:533">日落前1小时到，光线最好</li>
-                            <li data-inspector-id="html:b0e2ff82:534">没门票没检票口，直接开车进去</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:701">
+                        <ul data-inspector-id="html:d398bec8:702">
+                            <li data-inspector-id="html:d398bec8:703">公路上拍照注意来车，别站路中间</li>
+                            <li data-inspector-id="html:d398bec8:704">日落前1小时到，光线最好</li>
+                            <li data-inspector-id="html:d398bec8:705">没门票没检票口，直接开车进去</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州马皇丘大峡谷')" data-inspector-id="html:b0e2ff82:535">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:536"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:537"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州马皇丘大峡谷')" data-inspector-id="html:d398bec8:706">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:707"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:708"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:538">
-                <span data-inspector-id="html:b0e2ff82:539">车程40分钟</span><div class="line" data-inspector-id="html:b0e2ff82:540"></div><span data-inspector-id="html:b0e2ff82:541">入住民宿</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:709">
+                <span data-inspector-id="html:d398bec8:710">车程40分钟</span><div class="line" data-inspector-id="html:d398bec8:711"></div><span data-inspector-id="html:d398bec8:712">入住民宿</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:542">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Dymf4fnYyy')" data-inspector-id="html:b0e2ff82:543">
-                    <span class="card-badge hotel" data-inspector-id="html:b0e2ff82:544">🏨 住宿</span>
+            <div class="card" data-inspector-id="html:d398bec8:713">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Dymf4fnYyy')" data-inspector-id="html:d398bec8:714">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:715">🏨 住宿</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:545">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:546">🚗 从马皇丘大峡谷 · 约40分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:547">水寨人家民宿</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:548">¥450/晚 · 小岛民宿 · 可坐船入住</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:549">靠近高椅岭、马皇丘，小岛民宿环境安静私密，拍照出片。离高椅岭车程短，方便次日错峰入园。平价备选：高椅岭百姓农庄约¥300/晚。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:550">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:551">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:716">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:717">🚗 从马皇丘大峡谷 · 约40分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:718">水寨人家民宿</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:719">¥450/晚 · 小岛民宿 · 可坐船入住</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:720">靠近高椅岭、马皇丘，小岛民宿环境安静私密，拍照出片。离高椅岭车程短，方便次日错峰入园。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:721">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:722">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:552">
-                        <ul data-inspector-id="html:b0e2ff82:553">
-                            <li data-inspector-id="html:b0e2ff82:554">在岛上，要坐船进去，提前跟老板约船</li>
-                            <li data-inspector-id="html:b0e2ff82:555">晚上蚊子多，带驱蚊水</li>
-                            <li data-inspector-id="html:b0e2ff82:556">民宿饭菜一般，可以自带点零食</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:723">
+                        <ul data-inspector-id="html:d398bec8:724">
+                            <li data-inspector-id="html:d398bec8:725">在岛上，要坐船进去，提前跟老板约船</li>
+                            <li data-inspector-id="html:d398bec8:726">晚上蚊子多，带驱蚊水</li>
+                            <li data-inspector-id="html:d398bec8:727">民宿饭菜一般，可以自带点零食</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州水寨人家民宿')" data-inspector-id="html:b0e2ff82:557">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:558"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:559"></path></svg>
-                        导航前往
+                    <div class="btn-row" data-inspector-id="html:d398bec8:728">
+                        <button class="nav-pill" onclick="openNav('郴州水寨人家民宿')" data-inspector-id="html:d398bec8:729">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:730"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:731"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('郴州水寨人家民宿')" data-inspector-id="html:d398bec8:732">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:733"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:734"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:735">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/S50d2mvCvJ')" data-inspector-id="html:d398bec8:736">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:737">🏨 住宿 · 丹霞院子</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:738">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:739">🚗 从马皇丘 · 约35分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:740">高椅岭一号院民宿</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:741">¥380/晚 · 丹霞脚下 · 宝藏院子</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:742">民宿院子正对红岩山壁，清晨推窗见丹霞。老板能做地道农家菜，性价比高，是片区热门宝藏民宿。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:743">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:744">▾</span>
                     </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:745">
+                        <ul data-inspector-id="html:d398bec8:746">
+                            <li data-inspector-id="html:d398bec8:747">热门房型紧俏，提前订</li>
+                            <li data-inspector-id="html:d398bec8:748">可让老板代买高椅岭门票</li>
+                        </ul>
+                    </div>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:749">
+                        <button class="nav-pill" onclick="openNav('资兴高椅岭一号院民宿')" data-inspector-id="html:d398bec8:750">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:751"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:752"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('资兴高椅岭一号院')" data-inspector-id="html:d398bec8:753">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:754"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:755"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-inspector-id="html:d398bec8:756">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/xQ7lBdBqYQ')" data-inspector-id="html:d398bec8:757">
+                    <span class="card-badge hotel" data-inspector-id="html:d398bec8:758">🏨 住宿 · 躺看丹霞</span>
+                </div>
+                <div class="card-body" data-inspector-id="html:d398bec8:759">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:760">🚗 从马皇丘 · 约35分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:761">高椅岭丹霞秘境酒店</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:762">¥650/晚 · 景区边高端 · 湖景阳台</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:763">片区最新的高端酒店，躺在床上、站在阳台就能直面红岩碧湖与落日，适合想沉浸式住在风景里。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:764">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:765">▾</span>
+                    </button>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:766">
+                        <ul data-inspector-id="html:d398bec8:767">
+                            <li data-inspector-id="html:d398bec8:768">价格偏高，预算充足再选</li>
+                            <li data-inspector-id="html:d398bec8:769">订"丹霞景观房"才正对山景</li>
+                        </ul>
+                    </div>
+                    <div class="btn-row" data-inspector-id="html:d398bec8:770">
+                        <button class="nav-pill" onclick="openNav('郴州高椅岭丹霞秘境酒店')" data-inspector-id="html:d398bec8:771">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:772"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:773"></path></svg>
+                            导航
+                        </button>
+                        <button class="meituan-pill" onclick="openMeituan('郴州高椅岭丹霞秘境酒店')" data-inspector-id="html:d398bec8:774">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:775"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" data-inspector-id="html:d398bec8:776"></path></svg>
+                            美团订房
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ====== Day 4 ====== -->
-    <div class="day-panel" id="day-4" data-inspector-id="html:b0e2ff82:560">
-        <div class="card-list" data-inspector-id="html:b0e2ff82:561">
-            <div class="card" data-inspector-id="html:b0e2ff82:562">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')" data-inspector-id="html:b0e2ff82:563">
-                    <span class="card-badge spot" data-inspector-id="html:b0e2ff82:564">📍 错峰必去 · 清晨</span>
+    <div class="day-panel" id="day-4" data-inspector-id="html:d398bec8:777">
+        <div class="card-list" data-inspector-id="html:d398bec8:778">
+            <div class="card" data-inspector-id="html:d398bec8:779">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')" data-inspector-id="html:d398bec8:780">
+                    <span class="card-badge spot" data-inspector-id="html:d398bec8:781">📍 错峰必去 · 清晨</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:565">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:566">🚗 从水寨民宿 · 约15分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:567">高椅岭</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:568">¥95/人 · 7:00前进园 · 游玩2.5小时</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:569">丹霞地貌天花板，红岩绿水、险寨奇涧，龙脊步道震撼。早7点前入园避开旅行团，独享无人丹霞。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:570">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:571">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:782">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:783">🚗 从水寨民宿 · 约15分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:784">高椅岭</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:785">¥95/人 · 7:00前进园 · 游玩2.5小时</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:786">丹霞地貌天花板，红岩绿水、险寨奇涧，龙脊步道震撼。早7点前入园避开旅行团，独享无人丹霞。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:787">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:788">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:572">
-                        <ul data-inspector-id="html:b0e2ff82:573">
-                            <li data-inspector-id="html:b0e2ff82:574">7点前到！9点后旅行团扎堆，拍不到无人片</li>
-                            <li data-inspector-id="html:b0e2ff82:575">龙脊步道窄，错车让行注意安全</li>
-                            <li data-inspector-id="html:b0e2ff82:576">全程无遮挡，做好防晒</li>
-                            <li data-inspector-id="html:b0e2ff82:577">国庆限流，提前在公众号预约门票</li>
-                            <li data-inspector-id="html:b0e2ff82:578">穿防滑鞋，岩石有点滑</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:789">
+                        <ul data-inspector-id="html:d398bec8:790">
+                            <li data-inspector-id="html:d398bec8:791">7点前到！9点后旅行团扎堆，拍不到无人片</li>
+                            <li data-inspector-id="html:d398bec8:792">龙脊步道窄，错车让行注意安全</li>
+                            <li data-inspector-id="html:d398bec8:793">全程无遮挡，做好防晒</li>
+                            <li data-inspector-id="html:d398bec8:794">国庆限流，提前在公众号预约门票</li>
+                            <li data-inspector-id="html:d398bec8:795">穿防滑鞋，岩石有点滑</li>
                         </ul>
                     </div>
-                    <button class="nav-pill" onclick="openNav('郴州高椅岭风景区')" data-inspector-id="html:b0e2ff82:579">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:580"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:581"></path></svg>
+                    <button class="nav-pill" onclick="openNav('郴州高椅岭风景区')" data-inspector-id="html:d398bec8:796">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:797"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:798"></path></svg>
                         导航前往
                     </button>
                 </div>
             </div>
 
-            <div class="trip-divider" data-inspector-id="html:b0e2ff82:582">
-                <span data-inspector-id="html:b0e2ff82:583">车程约55分钟</span><div class="line" data-inspector-id="html:b0e2ff82:584"></div><span data-inspector-id="html:b0e2ff82:585">郴州西站</span>
+            <div class="trip-divider" data-inspector-id="html:d398bec8:799">
+                <span data-inspector-id="html:d398bec8:800">车程约55分钟</span><div class="line" data-inspector-id="html:d398bec8:801"></div><span data-inspector-id="html:d398bec8:802">郴州西站</span>
             </div>
 
-            <div class="card" data-inspector-id="html:b0e2ff82:586">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')" data-inspector-id="html:b0e2ff82:587">
-                    <span class="card-badge transport" data-inspector-id="html:b0e2ff82:588">🚄 返程</span>
+            <div class="card" data-inspector-id="html:d398bec8:803">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')" data-inspector-id="html:d398bec8:804">
+                    <span class="card-badge transport" data-inspector-id="html:d398bec8:805">🚄 返程</span>
                 </div>
-                <div class="card-body" data-inspector-id="html:b0e2ff82:589">
-                    <div class="drive-badge" data-inspector-id="html:b0e2ff82:590">🚗 从高椅岭景区 · 约55分钟</div>
-                    <div class="card-title" data-inspector-id="html:b0e2ff82:591">郴州西站还车 → 高铁回广州</div>
-                    <div class="card-meta" data-inspector-id="html:b0e2ff82:592">建议10:00左右出发 · 避开返程高峰</div>
-                    <p class="card-desc" data-inspector-id="html:b0e2ff82:593">游玩结束自驾回西站还车，乘高铁返广州南（1.5-2h）。自驾方案直接上京港澳高速回广州。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:b0e2ff82:594">
-                        避坑指南 <span class="arrow" data-inspector-id="html:b0e2ff82:595">▾</span>
+                <div class="card-body" data-inspector-id="html:d398bec8:806">
+                    <div class="drive-badge" data-inspector-id="html:d398bec8:807">🚗 从高椅岭景区 · 约55分钟</div>
+                    <div class="card-title" data-inspector-id="html:d398bec8:808">郴州西站还车 → 高铁回广州</div>
+                    <div class="card-meta" data-inspector-id="html:d398bec8:809">建议10:00左右出发 · 避开返程高峰</div>
+                    <p class="card-desc" data-inspector-id="html:d398bec8:810">游玩结束自驾回西站还车，乘高铁返广州南（1.5-2h）。自驾方案直接上京港澳高速回广州。</p>
+                    <button class="tips-toggle" onclick="toggleTips(this)" data-inspector-id="html:d398bec8:811">
+                        避坑指南 <span class="arrow" data-inspector-id="html:d398bec8:812">▾</span>
                     </button>
-                    <div class="tips-content" data-inspector-id="html:b0e2ff82:596">
-                        <ul data-inspector-id="html:b0e2ff82:597">
-                            <li data-inspector-id="html:b0e2ff82:598">还车提前30分钟到，检查油量/电量</li>
-                            <li data-inspector-id="html:b0e2ff82:599">国庆下午返程高速必堵，尽量早走</li>
-                            <li data-inspector-id="html:b0e2ff82:600">高铁票买下午2点前的，不然赶不上</li>
+                    <div class="tips-content" data-inspector-id="html:d398bec8:813">
+                        <ul data-inspector-id="html:d398bec8:814">
+                            <li data-inspector-id="html:d398bec8:815">还车提前30分钟到，检查油量/电量</li>
+                            <li data-inspector-id="html:d398bec8:816">国庆下午返程高速必堵，尽量早走</li>
+                            <li data-inspector-id="html:d398bec8:817">高铁票买下午2点前的，不然赶不上</li>
                         </ul>
                     </div>
-                    <button class="nav-pill secondary" onclick="openNav('郴州西站')" data-inspector-id="html:b0e2ff82:601">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:602"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:b0e2ff82:603"></path></svg>
+                    <button class="nav-pill secondary" onclick="openNav('郴州西站')" data-inspector-id="html:d398bec8:818">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:819"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" data-inspector-id="html:d398bec8:820"></path></svg>
                         导航到西站
                     </button>
                 </div>
@@ -1755,109 +2094,109 @@
     </div>
 
     <!-- FAB按钮组 -->
-    <div class="fab-group" data-inspector-id="html:b0e2ff82:604">
-        <button class="fab-btn" onclick="showInstallHint()" data-inspector-id="html:b0e2ff82:605">
-            📱<span data-inspector-id="html:b0e2ff82:606">装APP</span>
+    <div class="fab-group" data-inspector-id="html:d398bec8:821">
+        <button class="fab-btn" onclick="showInstallHint()" data-inspector-id="html:d398bec8:822">
+            📱<span data-inspector-id="html:d398bec8:823">装APP</span>
         </button>
-        <button class="fab-btn" onclick="document.getElementById('costSheet').classList.add('active')" data-inspector-id="html:b0e2ff82:607">
-            💰<span data-inspector-id="html:b0e2ff82:608">费用</span>
+        <button class="fab-btn" onclick="document.getElementById('costSheet').classList.add('active')" data-inspector-id="html:d398bec8:824">
+            💰<span data-inspector-id="html:d398bec8:825">费用</span>
         </button>
     </div>
 
     <!-- 添加到主屏幕引导 -->
-    <div class="install-hint" id="installHint" data-inspector-id="html:b0e2ff82:609">
-        <button class="install-hint-close" onclick="document.getElementById('installHint').classList.remove('show')" data-inspector-id="html:b0e2ff82:610">×</button>
-        <div class="install-hint-text" data-inspector-id="html:b0e2ff82:611">
-            <strong data-inspector-id="html:b0e2ff82:612">添加到主屏幕</strong><br data-inspector-id="html:b0e2ff82:613">
-            点 Safari 底部 <strong data-inspector-id="html:b0e2ff82:614">分享按钮</strong>（方框+向上箭头）<br data-inspector-id="html:b0e2ff82:615">
+    <div class="install-hint" id="installHint" data-inspector-id="html:d398bec8:826">
+        <button class="install-hint-close" onclick="document.getElementById('installHint').classList.remove('show')" data-inspector-id="html:d398bec8:827">×</button>
+        <div class="install-hint-text" data-inspector-id="html:d398bec8:828">
+            <strong data-inspector-id="html:d398bec8:829">添加到主屏幕</strong><br data-inspector-id="html:d398bec8:830">
+            点 Safari 底部 <strong data-inspector-id="html:d398bec8:831">分享按钮</strong>（方框+向上箭头）<br data-inspector-id="html:d398bec8:832">
             选择「添加到主屏幕」，像APP一样打开，没网也能看
         </div>
     </div>
 
     <!-- 费用Sheet -->
-    <div class="sheet-overlay" id="costSheet" onclick="if(event.target===this)this.classList.remove('active')" data-inspector-id="html:b0e2ff82:616">
-        <div class="sheet" data-inspector-id="html:b0e2ff82:617">
-            <div class="sheet-handle" data-inspector-id="html:b0e2ff82:618"></div>
-            <div class="sheet-title" data-inspector-id="html:b0e2ff82:619">💰 费用预算</div>
-            <div class="sheet-subtitle" data-inspector-id="html:b0e2ff82:620">一家三口 · 国庆出行（高速免费）</div>
+    <div class="sheet-overlay" id="costSheet" onclick="if(event.target===this)this.classList.remove('active')" data-inspector-id="html:d398bec8:833">
+        <div class="sheet" data-inspector-id="html:d398bec8:834">
+            <div class="sheet-handle" data-inspector-id="html:d398bec8:835"></div>
+            <div class="sheet-title" data-inspector-id="html:d398bec8:836">💰 费用预算</div>
+            <div class="sheet-subtitle" data-inspector-id="html:d398bec8:837">一家三口 · 国庆出行（高速免费）</div>
             
-            <div class="cost-section" data-inspector-id="html:b0e2ff82:621">
-                <div class="cost-section-title" data-inspector-id="html:b0e2ff82:622">方案A：全程自驾油车</div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:623"><span class="label" data-inspector-id="html:b0e2ff82:624">油费（往返+当地）</span><span class="value" data-inspector-id="html:b0e2ff82:625">¥640</span></div>
-                <div class="cost-row free" data-inspector-id="html:b0e2ff82:626"><span class="label" data-inspector-id="html:b0e2ff82:627">高速过路费</span><span class="value" data-inspector-id="html:b0e2ff82:628">¥0 国庆免费</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:629"><span class="label" data-inspector-id="html:b0e2ff82:630">住宿（3晚）</span><span class="value" data-inspector-id="html:b0e2ff82:631">¥1,260</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:632"><span class="label" data-inspector-id="html:b0e2ff82:633">门票（2大1小）</span><span class="value" data-inspector-id="html:b0e2ff82:634">¥1,047</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:635"><span class="label" data-inspector-id="html:b0e2ff82:636">餐饮（4天）</span><span class="value" data-inspector-id="html:b0e2ff82:637">¥1,200</span></div>
-                <div class="cost-total" data-inspector-id="html:b0e2ff82:638">
-                    <span class="label" data-inspector-id="html:b0e2ff82:639">总花费</span>
-                    <span class="value" data-inspector-id="html:b0e2ff82:640">¥4,147</span>
+            <div class="cost-section" data-inspector-id="html:d398bec8:838">
+                <div class="cost-section-title" data-inspector-id="html:d398bec8:839">方案A：全程自驾油车</div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:840"><span class="label" data-inspector-id="html:d398bec8:841">油费（往返+当地）</span><span class="value" data-inspector-id="html:d398bec8:842">¥640</span></div>
+                <div class="cost-row free" data-inspector-id="html:d398bec8:843"><span class="label" data-inspector-id="html:d398bec8:844">高速过路费</span><span class="value" data-inspector-id="html:d398bec8:845">¥0 国庆免费</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:846"><span class="label" data-inspector-id="html:d398bec8:847">住宿（3晚）</span><span class="value" data-inspector-id="html:d398bec8:848">¥1,260</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:849"><span class="label" data-inspector-id="html:d398bec8:850">门票（2大1小）</span><span class="value" data-inspector-id="html:d398bec8:851">¥1,047</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:852"><span class="label" data-inspector-id="html:d398bec8:853">餐饮（4天）</span><span class="value" data-inspector-id="html:d398bec8:854">¥1,200</span></div>
+                <div class="cost-total" data-inspector-id="html:d398bec8:855">
+                    <span class="label" data-inspector-id="html:d398bec8:856">总花费</span>
+                    <span class="value" data-inspector-id="html:d398bec8:857">¥4,147</span>
                 </div>
             </div>
 
-            <div class="cost-section" data-inspector-id="html:b0e2ff82:641">
-                <div class="cost-section-title" data-inspector-id="html:b0e2ff82:642">方案B：高铁+当地租电车</div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:643"><span class="label" data-inspector-id="html:b0e2ff82:644">高铁往返（2大1小）</span><span class="value" data-inspector-id="html:b0e2ff82:645">¥900</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:646"><span class="label" data-inspector-id="html:b0e2ff82:647">租车4天+电费</span><span class="value" data-inspector-id="html:b0e2ff82:648">¥700</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:649"><span class="label" data-inspector-id="html:b0e2ff82:650">住宿（3晚）</span><span class="value" data-inspector-id="html:b0e2ff82:651">¥1,260</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:652"><span class="label" data-inspector-id="html:b0e2ff82:653">门票（2大1小）</span><span class="value" data-inspector-id="html:b0e2ff82:654">¥1,047</span></div>
-                <div class="cost-row" data-inspector-id="html:b0e2ff82:655"><span class="label" data-inspector-id="html:b0e2ff82:656">餐饮（4天）</span><span class="value" data-inspector-id="html:b0e2ff82:657">¥1,200</span></div>
-                <div class="cost-total" data-inspector-id="html:b0e2ff82:658">
-                    <span class="label" data-inspector-id="html:b0e2ff82:659">总花费</span>
-                    <span class="value" data-inspector-id="html:b0e2ff82:660">¥5,107</span>
+            <div class="cost-section" data-inspector-id="html:d398bec8:858">
+                <div class="cost-section-title" data-inspector-id="html:d398bec8:859">方案B：高铁+当地租电车</div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:860"><span class="label" data-inspector-id="html:d398bec8:861">高铁往返（2大1小）</span><span class="value" data-inspector-id="html:d398bec8:862">¥900</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:863"><span class="label" data-inspector-id="html:d398bec8:864">租车4天+电费</span><span class="value" data-inspector-id="html:d398bec8:865">¥700</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:866"><span class="label" data-inspector-id="html:d398bec8:867">住宿（3晚）</span><span class="value" data-inspector-id="html:d398bec8:868">¥1,260</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:869"><span class="label" data-inspector-id="html:d398bec8:870">门票（2大1小）</span><span class="value" data-inspector-id="html:d398bec8:871">¥1,047</span></div>
+                <div class="cost-row" data-inspector-id="html:d398bec8:872"><span class="label" data-inspector-id="html:d398bec8:873">餐饮（4天）</span><span class="value" data-inspector-id="html:d398bec8:874">¥1,200</span></div>
+                <div class="cost-total" data-inspector-id="html:d398bec8:875">
+                    <span class="label" data-inspector-id="html:d398bec8:876">总花费</span>
+                    <span class="value" data-inspector-id="html:d398bec8:877">¥5,107</span>
                 </div>
             </div>
 
-            <button class="sheet-close" onclick="document.getElementById('costSheet').classList.remove('active')" data-inspector-id="html:b0e2ff82:661">关闭</button>
+            <button class="sheet-close" onclick="document.getElementById('costSheet').classList.remove('active')" data-inspector-id="html:d398bec8:878">关闭</button>
         </div>
     </div>
 
     <!-- 导航选择Sheet -->
-    <div class="sheet-overlay" id="navSheet" onclick="if(event.target===this)this.classList.remove('active')" data-inspector-id="html:b0e2ff82:662">
-        <div class="sheet" data-inspector-id="html:b0e2ff82:663">
-            <div class="sheet-handle" data-inspector-id="html:b0e2ff82:664"></div>
-            <div class="sheet-title" data-inspector-id="html:b0e2ff82:665">选择导航应用</div>
-            <div class="sheet-subtitle" id="navPlaceName" data-inspector-id="html:b0e2ff82:666">目的地</div>
+    <div class="sheet-overlay" id="navSheet" onclick="if(event.target===this)this.classList.remove('active')" data-inspector-id="html:d398bec8:879">
+        <div class="sheet" data-inspector-id="html:d398bec8:880">
+            <div class="sheet-handle" data-inspector-id="html:d398bec8:881"></div>
+            <div class="sheet-title" data-inspector-id="html:d398bec8:882">选择导航应用</div>
+            <div class="sheet-subtitle" id="navPlaceName" data-inspector-id="html:d398bec8:883">目的地</div>
             
-            <button class="map-option" onclick="openMap('apple')" data-inspector-id="html:b0e2ff82:667">
-                <div class="map-icon apple" data-inspector-id="html:b0e2ff82:668"></div>
+            <button class="map-option" onclick="openMap('apple')" data-inspector-id="html:d398bec8:884">
+                <div class="map-icon apple" data-inspector-id="html:d398bec8:885"></div>
                 苹果地图
-                <div class="chevron" data-inspector-id="html:b0e2ff82:669">›</div>
+                <div class="chevron" data-inspector-id="html:d398bec8:886">›</div>
             </button>
-            <button class="map-option" onclick="openMap('amap')" data-inspector-id="html:b0e2ff82:670">
-                <div class="map-icon amap" data-inspector-id="html:b0e2ff82:671">高</div>
+            <button class="map-option" onclick="openMap('amap')" data-inspector-id="html:d398bec8:887">
+                <div class="map-icon amap" data-inspector-id="html:d398bec8:888">高</div>
                 高德地图
-                <div class="chevron" data-inspector-id="html:b0e2ff82:672">›</div>
+                <div class="chevron" data-inspector-id="html:d398bec8:889">›</div>
             </button>
-            <button class="map-option" onclick="openMap('baidu')" data-inspector-id="html:b0e2ff82:673">
-                <div class="map-icon baidu" data-inspector-id="html:b0e2ff82:674">百</div>
+            <button class="map-option" onclick="openMap('baidu')" data-inspector-id="html:d398bec8:890">
+                <div class="map-icon baidu" data-inspector-id="html:d398bec8:891">百</div>
                 百度地图
-                <div class="chevron" data-inspector-id="html:b0e2ff82:675">›</div>
+                <div class="chevron" data-inspector-id="html:d398bec8:892">›</div>
             </button>
             
-            <button class="sheet-cancel" onclick="document.getElementById('navSheet').classList.remove('active')" data-inspector-id="html:b0e2ff82:676">取消</button>
+            <button class="sheet-cancel" onclick="document.getElementById('navSheet').classList.remove('active')" data-inspector-id="html:d398bec8:893">取消</button>
         </div>
     </div>
 
     <!-- 底部Tab Bar -->
-    <div class="tab-bar" data-inspector-id="html:b0e2ff82:677">
-        <div class="tab-bar-item" data-nav="overview" data-inspector-id="html:b0e2ff82:678">
-            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:679"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" data-inspector-id="html:b0e2ff82:680"></path></svg>
+    <div class="tab-bar" data-inspector-id="html:d398bec8:894">
+        <div class="tab-bar-item" data-nav="overview" data-inspector-id="html:d398bec8:895">
+            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:896"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" data-inspector-id="html:d398bec8:897"></path></svg>
             总览
         </div>
-        <div class="tab-bar-item active" data-nav="1" data-inspector-id="html:b0e2ff82:681">
-            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:682"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:b0e2ff82:683"></path></svg>
+        <div class="tab-bar-item active" data-nav="1" data-inspector-id="html:d398bec8:898">
+            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:899"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:d398bec8:900"></path></svg>
             Day1
         </div>
-        <div class="tab-bar-item" data-nav="2" data-inspector-id="html:b0e2ff82:684">
-            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:685"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:b0e2ff82:686"></path></svg>
+        <div class="tab-bar-item" data-nav="2" data-inspector-id="html:d398bec8:901">
+            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:902"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:d398bec8:903"></path></svg>
             Day2
         </div>
-        <div class="tab-bar-item" data-nav="3" data-inspector-id="html:b0e2ff82:687">
-            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:688"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:b0e2ff82:689"></path></svg>
+        <div class="tab-bar-item" data-nav="3" data-inspector-id="html:d398bec8:904">
+            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:905"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:d398bec8:906"></path></svg>
             Day3
         </div>
-        <div class="tab-bar-item" data-nav="4" data-inspector-id="html:b0e2ff82:690">
-            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:b0e2ff82:691"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:b0e2ff82:692"></path></svg>
+        <div class="tab-bar-item" data-nav="4" data-inspector-id="html:d398bec8:907">
+            <svg viewBox="0 0 24 24" fill="currentColor" data-inspector-id="html:d398bec8:908"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" data-inspector-id="html:d398bec8:909"></path></svg>
             Day4
         </div>
     </div>
@@ -1969,6 +2308,21 @@
             }
             window.location.href = url;
             document.getElementById('navSheet').classList.remove('active');
+        }
+
+        function openMeituan(keyword) {
+            const q = encodeURIComponent(keyword);
+            const scheme = 'imeituan://www.meituan.com/search?q=' + q;
+            const fallback = 'https://i.meituan.com/s/' + q;
+            let jumped = false;
+            const onHide = function() {
+                if (document.hidden) { jumped = true; document.removeEventListener('visibilitychange', onHide); }
+            };
+            document.addEventListener('visibilitychange', onHide);
+            window.location.href = scheme;
+            setTimeout(function() {
+                if (!jumped) window.location.href = fallback;
+            }, 1600);
         }
     </script>
 
