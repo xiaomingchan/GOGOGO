@@ -208,33 +208,16 @@
         .tab-bar-item.active { color: var(--apple-blue); }
         .tab-bar-item svg { width: 22px; height: 22px; }
         @media (min-width: 768px) { body { max-width: 480px; margin: 0 auto; } }
-
-        /* ===== 路线总览地图 ===== */
-        #routeMap {
-            height: 380px;
-            border-radius: 14px;
-            margin-top: 10px;
-            z-index: 1;
-            background: #e8e8ed;
-        }
-        .leaflet-popup-content-wrapper {
-            border-radius: 12px;
-            font-family: -apple-system, "PingFang SC", sans-serif;
-        }
+        #routeMap { height: 380px; border-radius: 14px; margin-top: 10px; z-index: 1; background: #e8e8ed; }
+        .leaflet-popup-content-wrapper { border-radius: 12px; font-family: -apple-system, "PingFang SC", sans-serif; }
         .leaflet-popup-content { margin: 12px 14px; font-size: 13px; line-height: 1.5; }
         .popup-nav-btn {
             display: inline-block; margin-top: 6px; padding: 6px 12px;
             background: var(--apple-blue); color: white; border-radius: 14px;
             font-size: 12px; font-weight: 600; text-decoration: none;
         }
-        .map-legend {
-            display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
-            font-size: 11px; color: var(--apple-text-secondary);
-        }
-        .legend-dot {
-            display: inline-block; width: 10px; height: 10px; border-radius: 50%;
-            vertical-align: middle; margin-right: 4px;
-        }
+        .map-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; font-size: 11px; color: var(--apple-text-secondary); }
+        .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
     </style>
 </head>
 <body>
@@ -247,7 +230,6 @@
             <p class="hero-subtitle">草原 · 雾漫东江 · 丹霞 · 小众免费</p>
         </div>
     </div>
-
     <div class="weather-card">
         <div class="weather-icon" id="weatherIcon">🌡️</div>
         <div class="weather-info">
@@ -259,12 +241,10 @@
             <div class="weather-mountain-label">仰天湖山上</div>
         </div>
     </div>
-
     <div class="rain-alert">
         <div class="rain-alert-icon">🌂</div>
         <div class="rain-alert-text" id="rainAlertText"><strong>天气加载中…</strong></div>
     </div>
-
     <div class="overview">
         <div class="overview-stats">
             <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">天数</div></div>
@@ -273,7 +253,6 @@
             <div class="stat-item"><div class="stat-num">¥2887</div><div class="stat-label">自驾·不含住宿</div></div>
         </div>
     </div>
-
     <div class="next-stop-bar" onclick="goToNextStop()">
         <div class="next-stop-arrow">→</div>
         <div class="next-stop-info">
@@ -283,7 +262,6 @@
         </div>
         <div class="next-stop-nav">导航</div>
     </div>
-
     <div class="day-tabs">
         <button class="tab-btn" data-day="overview"><span class="tab-label">总览</span>时间轴</button>
         <button class="tab-btn active" data-day="1"><span class="tab-label">10/2 五</span>抵达</button>
@@ -291,10 +269,7 @@
         <button class="tab-btn" data-day="3"><span class="tab-label">10/4 日</span>东江</button>
         <button class="tab-btn" data-day="4"><span class="tab-label">10/5 一</span>高椅岭</button>
     </div>
-
-    <!-- ====== 时间轴总览 ====== -->
     <div class="timeline-overview" id="day-overview">
-        <!-- 路线地图总览 -->
         <div class="card">
             <div class="card-body">
                 <div class="card-title">🗺️ 路线总览</div>
@@ -308,7 +283,6 @@
                 </div>
             </div>
         </div>
-
         <div class="timeline-day-title">10/2 周五 · 抵达市区</div>
         <div class="timeline-item"><div class="timeline-time">上午</div><div class="timeline-dot transport"></div><div class="timeline-info"><div class="timeline-name">自驾抵达郴州</div><div class="timeline-meta">G4京港澳约4.5h</div></div></div>
         <div class="timeline-item"><div class="timeline-time">中午</div><div class="timeline-dot hotel"></div><div class="timeline-info"><div class="timeline-name">汉庭酒店入住（裕后街）</div><div class="timeline-meta">裕后街旁 · 免费停车</div></div></div>
@@ -329,14 +303,10 @@
         <div class="timeline-item"><div class="timeline-time">清晨</div><div class="timeline-dot spot"></div><div class="timeline-info"><div class="timeline-name">高椅岭</div><div class="timeline-meta">7点前进园 · 无人丹霞</div></div></div>
         <div class="timeline-item"><div class="timeline-time">上午</div><div class="timeline-dot transport"></div><div class="timeline-info"><div class="timeline-name">自驾回广州</div><div class="timeline-meta">10点前出发避高峰</div></div></div>
     </div>
-
-    <!-- ====== Day 1 ====== -->
     <div class="day-panel active" id="day-1">
         <div class="card-list">
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')">
-                    <span class="card-badge transport">🚗 抵达 · 10/2</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')"><span class="card-badge transport">🚗 抵达 · 10/2</span></div>
                 <div class="card-body">
                     <div class="card-title">自驾抵达郴州</div>
                     <div class="card-meta">上午抵达 · 自驾进市区</div>
@@ -353,13 +323,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>车程约25分钟</span><div class="line"></div><span>入住酒店</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/AnYoWSXyGV')">
-                    <span class="card-badge hotel">🏨 已订 · D1住宿</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/AnYoWSXyGV')"><span class="card-badge hotel">🏨 已订 · D1住宿</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从高速出口过来 · 约25分钟</div>
                     <div class="card-title">汉庭酒店（郴州裕后街店）</div>
@@ -383,13 +349,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="trip-divider"><span>下午 · 三选一</span><div class="line"></div><span>傍晚去裕后街</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')">
-                    <span class="card-badge free">📍 可选A · 休闲拍照</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')"><span class="card-badge free">📍 可选A · 休闲拍照</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从酒店过来 · 约10分钟</div>
                     <div class="card-title">五岭阁</div>
@@ -406,11 +368,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/1LS0OVHhez')">
-                    <span class="card-badge spot">📍 可选B · 雨天首选</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/1LS0OVHhez')"><span class="card-badge spot">📍 可选B · 雨天首选</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从酒店过来 · 约30分钟</div>
                     <div class="card-title">万华岩溶洞</div>
@@ -427,11 +386,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')">
-                    <span class="card-badge free">📍 可选C · 城市爬山</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/0SVAuVkoja')"><span class="card-badge free">📍 可选C · 城市爬山</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从酒店过来 · 约15分钟</div>
                     <div class="card-title">苏仙岭</div>
@@ -448,13 +404,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>傍晚</span><div class="line"></div><span>裕后街夜景晚餐</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/rzIsW2wDpm')">
-                    <span class="card-badge free">📍 景点 · 免费</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/rzIsW2wDpm')"><span class="card-badge free">📍 景点 · 免费</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 从酒店步行 · 约8分钟</div>
                     <div class="card-title">裕后街</div>
@@ -466,7 +418,6 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
                 <div class="rank-card-banner">🏆 美团必吃榜 · 实时</div>
                 <div class="card-body">
@@ -482,11 +433,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')">
-                    <span class="card-badge food">🍜 晚餐 · 推荐1</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')"><span class="card-badge food">🍜 晚餐 · 推荐1</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 就在裕后街内</div>
                     <div class="card-title">栖凤渡鱼粉</div>
@@ -504,11 +452,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')">
-                    <span class="card-badge food">🍜 晚餐 · 推荐2</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')"><span class="card-badge food">🍜 晚餐 · 推荐2</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 就在裕后街内</div>
                     <div class="card-title">郴州砍肉粉</div>
@@ -520,11 +465,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')">
-                    <span class="card-badge food">🍗 晚餐 · 推荐3</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')"><span class="card-badge food">🍗 晚餐 · 推荐3</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 市区湘菜馆 · 打车约10分钟</div>
                     <div class="card-title">嘉禾血鸭</div>
@@ -536,11 +478,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/mHsvW0IIrr')">
-                    <span class="card-badge food">🍲 晚餐 · 推荐4</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/mHsvW0IIrr')"><span class="card-badge food">🍲 晚餐 · 推荐4</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 市区湘菜馆 · 打车约10分钟</div>
                     <div class="card-title">栖凤渡烧鸡公</div>
@@ -552,11 +491,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/2hLsFsfAdH')">
-                    <span class="card-badge food">🍡 小吃 · 逛街零嘴</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/2hLsFsfAdH')"><span class="card-badge food">🍡 小吃 · 逛街零嘴</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 裕后街/市区小吃店</div>
                     <div class="card-title">桂东黄糍粑</div>
@@ -570,14 +506,10 @@
             </div>
         </div>
     </div>
-
-    <!-- ====== Day 2 ====== -->
     <div class="day-panel" id="day-2">
         <div class="card-list">
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')">
-                    <span class="card-badge food">🍜 早餐 · 选项1</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')"><span class="card-badge food">🍜 早餐 · 选项1</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 从酒店步行 · 酒店附近</div>
                     <div class="card-title">栖凤渡鱼粉</div>
@@ -590,9 +522,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Sa9OaLnXwc')">
-                    <span class="card-badge food">🍜 早餐 · 选项2</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Sa9OaLnXwc')"><span class="card-badge food">🍜 早餐 · 选项2</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 从酒店步行 · 酒店附近</div>
                     <div class="card-title">清汤砍肉粉</div>
@@ -605,9 +535,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')">
-                    <span class="card-badge food">🥟 早餐 · 选项3</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/wP6K2ny0mP')"><span class="card-badge food">🥟 早餐 · 选项3</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 从酒店步行 · 酒店附近</div>
                     <div class="card-title">杀猪粉+油条</div>
@@ -619,13 +547,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>车程约1.5小时</span><div class="line"></div><span>盘山公路慢行</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8TYkHPOHRM')">
-                    <span class="card-badge spot">📍 核心景点 · 仰天湖</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8TYkHPOHRM')"><span class="card-badge spot">📍 核心景点 · 仰天湖</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从市区早餐处 · 约1.5小时</div>
                     <div class="card-title">仰天湖大草原</div>
@@ -645,13 +569,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>15:30下山</span><div class="line"></div><span>车程1小时到东江镇</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')">
-                    <span class="card-badge hotel">🏨 已订 · D2住宿</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')"><span class="card-badge hotel">🏨 已订 · D2住宿</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从仰天湖下山 · 约1小时</div>
                     <div class="card-title">安曼轻奢客栈（小东江店）</div>
@@ -675,7 +595,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="card">
                 <div class="rank-card-banner">🏆 东江湖美食榜 · 实时</div>
                 <div class="card-body">
@@ -690,11 +609,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/uj1PtlGOut')">
-                    <span class="card-badge food">🐟 晚餐 · 必点1</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/uj1PtlGOut')"><span class="card-badge food">🐟 晚餐 · 必点1</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从客栈过来 · 约5分钟</div>
                     <div class="card-title">东江清水鱼</div>
@@ -711,11 +627,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')">
-                    <span class="card-badge food">🍗 晚餐 · 必点2</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/gViY4Q82Zr')"><span class="card-badge food">🍗 晚餐 · 必点2</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从客栈过来 · 约5分钟</div>
                     <div class="card-title">嘉禾血鸭</div>
@@ -727,11 +640,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/UH5t9EadOo')">
-                    <span class="card-badge food">🥬 晚餐 · 必点3</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/UH5t9EadOo')"><span class="card-badge food">🥬 晚餐 · 必点3</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从客栈过来 · 约5分钟</div>
                     <div class="card-title">土腊肉炒笋</div>
@@ -743,11 +653,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/g1OTv5rSlO')">
-                    <span class="card-badge food">🥩 晚餐 · 必点4</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/g1OTv5rSlO')"><span class="card-badge food">🥩 晚餐 · 必点4</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从客栈过来 · 约5分钟</div>
                     <div class="card-title">湖南米粉肉</div>
@@ -761,14 +668,10 @@
             </div>
         </div>
     </div>
-
-    <!-- ====== Day 3 ====== -->
     <div class="day-panel" id="day-3">
         <div class="card-list">
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')">
-                    <span class="card-badge spot">📍 重中之重 · 清晨</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')"><span class="card-badge spot">📍 重中之重 · 清晨</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 从客栈步行 · 约3分钟</div>
                     <div class="card-title">雾漫小东江</div>
@@ -788,13 +691,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>回酒店补觉</span><div class="line"></div><span>车程30分钟到白廊</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/CrAQGFSIMg')">
-                    <span class="card-badge free">📍 免费 · 环湖自驾</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/CrAQGFSIMg')"><span class="card-badge free">📍 免费 · 环湖自驾</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从小东江景区 · 约30分钟</div>
                     <div class="card-title">白廊环湖公路</div>
@@ -811,13 +710,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>车程约1小时</span><div class="line"></div><span>飞天山</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/nY4mziBHqV')">
-                    <span class="card-badge spot">📍 竹筏丹霞</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/nY4mziBHqV')"><span class="card-badge spot">📍 竹筏丹霞</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从白廊景区 · 约1小时</div>
                     <div class="card-title">飞天山</div>
@@ -834,13 +729,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>想避雨/避人？</span><div class="line"></div><span>推荐改这个</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/yEfv2rhyHY')">
-                    <span class="card-badge free">📍 雨天首选 · 免费</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/yEfv2rhyHY')"><span class="card-badge free">📍 雨天首选 · 免费</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从白廊景区 · 约50分钟</div>
                     <div class="card-title">711时光小镇</div>
@@ -852,11 +743,8 @@
                     </button>
                 </div>
             </div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oTBOMgkwRx')">
-                    <span class="card-badge spot">📍 备选C · 明清古村</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oTBOMgkwRx')"><span class="card-badge spot">📍 备选C · 明清古村</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从白廊景区 · 约1小时</div>
                     <div class="card-title">板梁古村</div>
@@ -868,13 +756,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>车程10分钟</span><div class="line"></div><span>马皇丘（顺路免费打卡）</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oZ3SfkpsFL')">
-                    <span class="card-badge free">📍 免费 · 雨天注意</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/oZ3SfkpsFL')"><span class="card-badge free">📍 免费 · 雨天注意</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从飞天山/711 · 约10-20分钟</div>
                     <div class="card-title">马皇丘大峡谷</div>
@@ -891,13 +775,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>车程40分钟</span><div class="line"></div><span>入住客栈</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')">
-                    <span class="card-badge hotel">🏨 已订 · D3住宿</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')"><span class="card-badge hotel">🏨 已订 · D3住宿</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从马皇丘 · 约30-40分钟</div>
                     <div class="card-title">高椅岭客栈（高椅岭景区店）</div>
@@ -923,14 +803,10 @@
             </div>
         </div>
     </div>
-
-    <!-- ====== Day 4 ====== -->
     <div class="day-panel" id="day-4">
         <div class="card-list">
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')">
-                    <span class="card-badge spot">📍 错峰必去 · 清晨</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')"><span class="card-badge spot">📍 错峰必去 · 清晨</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从客栈 · 约10分钟（景区旁）</div>
                     <div class="card-title">高椅岭</div>
@@ -949,13 +825,9 @@
                     </button>
                 </div>
             </div>
-
             <div class="trip-divider"><span>游玩结束</span><div class="line"></div><span>自驾回广州约4.5h</span></div>
-
             <div class="card">
-                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')">
-                    <span class="card-badge transport">🚗 返程 · 10/5</span>
-                </div>
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')"><span class="card-badge transport">🚗 返程 · 10/5</span></div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从高椅岭景区 · 约4.5小时</div>
                     <div class="card-title">自驾返程回广州</div>
@@ -975,12 +847,10 @@
             </div>
         </div>
     </div>
-
     <div class="fab-group">
         <button class="fab-btn" onclick="showInstallHint()">📱<span>装APP</span></button>
         <button class="fab-btn" onclick="document.getElementById('costSheet').classList.add('active')">💰<span>费用</span></button>
     </div>
-
     <div class="install-hint" id="installHint">
         <button class="install-hint-close" onclick="document.getElementById('installHint').classList.remove('show')">×</button>
         <div class="install-hint-text">
@@ -989,7 +859,6 @@
             选择「添加到主屏幕」，像APP一样打开
         </div>
     </div>
-
     <div class="sheet-overlay" id="costSheet" onclick="if(event.target===this)this.classList.remove('active')">
         <div class="sheet">
             <div class="sheet-handle"></div>
@@ -1007,25 +876,17 @@
             <button class="sheet-close" onclick="document.getElementById('costSheet').classList.remove('active')">关闭</button>
         </div>
     </div>
-
     <div class="sheet-overlay" id="navSheet" onclick="if(event.target===this)this.classList.remove('active')">
         <div class="sheet">
             <div class="sheet-handle"></div>
             <div class="sheet-title">选择导航应用</div>
             <div class="sheet-subtitle" id="navPlaceName">目的地</div>
-            <button class="map-option" onclick="openMap('apple')">
-                <div class="map-icon apple"></div>苹果地图<div class="chevron">›</div>
-            </button>
-            <button class="map-option" onclick="openMap('amap')">
-                <div class="map-icon amap">高</div>高德地图<div class="chevron">›</div>
-            </button>
-            <button class="map-option" onclick="openMap('baidu')">
-                <div class="map-icon baidu">百</div>百度地图<div class="chevron">›</div>
-            </button>
+            <button class="map-option" onclick="openMap('apple')"><div class="map-icon apple"></div>苹果地图<div class="chevron">›</div></button>
+            <button class="map-option" onclick="openMap('amap')"><div class="map-icon amap">高</div>高德地图<div class="chevron">›</div></button>
+            <button class="map-option" onclick="openMap('baidu')"><div class="map-icon baidu">百</div>百度地图<div class="chevron">›</div></button>
             <button class="sheet-cancel" onclick="document.getElementById('navSheet').classList.remove('active')">取消</button>
         </div>
     </div>
-
     <div class="tab-bar">
         <div class="tab-bar-item" data-nav="overview">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
@@ -1048,24 +909,20 @@
             D4
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabBarItems = document.querySelectorAll('.tab-bar-item');
         const dayPanels = document.querySelectorAll('.day-panel');
         const overviewPanel = document.getElementById('day-overview');
-
         let routeMapInited = false;
         function initRouteMap() {
             if (routeMapInited || typeof L === 'undefined') return;
             routeMapInited = true;
             const map = L.map('routeMap', { zoomControl: true, attributionControl: false });
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                maxZoom: 17
+            L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+                subdomains: ['1','2','3','4'], maxZoom: 18
             }).addTo(map);
-
-            // [lat, lng, 显示名, 导航关键词]
             const days = [
                 { color: '#0071e3', pts: [
                     [25.77, 113.01, '抵达郴州', '郴州市'],
@@ -1090,7 +947,6 @@
                     [23.13, 113.26, '→ 回广州', '广州市']
                 ]}
             ];
-
             const allPts = [];
             days.forEach(day => {
                 const latlngs = day.pts.map(p => [p[0], p[1]]);
@@ -1109,18 +965,14 @@
             });
             map.fitBounds(L.latLngBounds(allPts).pad(0.08));
         }
-
         function switchDay(dayNum) {
             tabBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.day === dayNum));
             tabBarItems.forEach(item => item.classList.toggle('active', item.dataset.nav === dayNum));
             if (dayNum === 'overview') {
                 overviewPanel.classList.add('active');
                 dayPanels.forEach(p => p.classList.remove('active'));
-                // 等面板显示后再初始化/刷新地图尺寸
                 setTimeout(initRouteMap, 50);
-                if (typeof routeMapInited !== 'undefined' && routeMapInited) {
-                    setTimeout(() => { const maps = document.querySelectorAll('.leaflet-container'); maps.forEach(m => m._leaflet_id && window.dispatchEvent(new Event('resize'))); }, 100);
-                }
+                setTimeout(() => { window.dispatchEvent(new Event('resize')); }, 200);
             } else {
                 overviewPanel.classList.remove('active');
                 dayPanels.forEach(p => p.classList.toggle('active', p.id === 'day-' + dayNum));
@@ -1129,11 +981,7 @@
         }
         tabBtns.forEach(btn => btn.addEventListener('click', () => switchDay(btn.dataset.day)));
         tabBarItems.forEach(item => item.addEventListener('click', () => switchDay(item.dataset.nav)));
-
-        function toggleTips(btn) {
-            btn.classList.toggle('open');
-            btn.nextElementSibling.classList.toggle('open');
-        }
+        function toggleTips(btn) { btn.classList.toggle('open'); btn.nextElementSibling.classList.toggle('open'); }
         const nextStops = {
             '1': { name: '仰天湖大草原', drive: '车程约1.5小时 · 盘山公路', place: '郴州仰天湖大草原' },
             '2': { name: '雾漫小东江', drive: '清晨6点 · 步行3分钟到景区', place: '郴州东江湖风景区' },
@@ -1185,7 +1033,6 @@
             window.location.href = scheme;
             setTimeout(function() { if (!jumped) window.location.href = fallback; }, 1600);
         }
-        // ===== 实时天气 =====
         function wmoIcon(code, isDay) {
             if (code === 0) return isDay ? '☀️' : '🌙';
             if (code === 1) return isDay ? '🌤️' : '🌙';
