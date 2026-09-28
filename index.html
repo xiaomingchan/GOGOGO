@@ -941,24 +941,24 @@
         </div>
     </div>
 
-    <!-- 天气卡片 -->
+    <!-- 天气卡片（实时） -->
     <div class="weather-card">
-        <div class="weather-icon">🌧️</div>
+        <div class="weather-icon" id="weatherIcon">🌡️</div>
         <div class="weather-info">
-            <div class="weather-temp">郴州 18~25℃</div>
-            <div class="weather-desc">国庆多雨降温 · 带雨衣+冲锋衣</div>
+            <div class="weather-temp" id="weatherTemp">郴州 —</div>
+            <div class="weather-desc" id="weatherDesc">天气加载中…</div>
         </div>
         <div class="weather-mountain">
-            <div class="weather-mountain-temp">12℃</div>
-            <div class="weather-mountain-label">仰天湖雨雾</div>
+            <div class="weather-mountain-temp" id="mountainTemp">—℃</div>
+            <div class="weather-mountain-label">仰天湖山上</div>
         </div>
     </div>
 
-    <!-- 雨天提醒条 -->
+    <!-- 雨天提醒条（实时） -->
     <div class="rain-alert">
         <div class="rain-alert-icon">🌂</div>
-        <div class="rain-alert-text">
-            <strong>本趟赶在雨季：</strong>10/2 小雨、10/3 中雨（仰天湖山上约12℃湿冷）、10/4 中雨（雨雾东江反而可能更仙）、10/5 小雨（高椅岭红岩极滑）。每人带一次性雨衣+防水外套+防滑鞋。出发前2天再看一次预报。
+        <div class="rain-alert-text" id="rainAlertText">
+            <strong>天气加载中…</strong>
         </div>
     </div>
 
@@ -1016,7 +1016,7 @@
 
     <!-- ====== 时间轴总览 ====== -->
     <div class="timeline-overview" id="day-overview">
-        <div class="timeline-day-title">10/2 周五 · 抵达市区（小雨 19~25℃）</div>
+        <div class="timeline-day-title">10/2 周五 · 抵达市区</div>
         <div class="timeline-item">
             <div class="timeline-time">上午</div>
             <div class="timeline-dot transport"></div>
@@ -1050,7 +1050,7 @@
             </div>
         </div>
 
-        <div class="timeline-day-title">10/3 周六 · 仰天湖（中雨 19~27℃，山上12℃）</div>
+        <div class="timeline-day-title">10/3 周六 · 仰天湖</div>
         <div class="timeline-item">
             <div class="timeline-time">早上</div>
             <div class="timeline-dot food"></div>
@@ -1084,7 +1084,7 @@
             </div>
         </div>
 
-        <div class="timeline-day-title">10/4 周日 · 雾漫东江+丹霞（中雨 16~24℃）</div>
+        <div class="timeline-day-title">10/4 周日 · 雾漫东江+丹霞</div>
         <div class="timeline-item">
             <div class="timeline-time">清晨</div>
             <div class="timeline-dot spot"></div>
@@ -1126,7 +1126,7 @@
             </div>
         </div>
 
-        <div class="timeline-day-title">10/5 周一 · 高椅岭返程（小雨 14~18℃）</div>
+        <div class="timeline-day-title">10/5 周一 · 高椅岭返程</div>
         <div class="timeline-item">
             <div class="timeline-time">清晨</div>
             <div class="timeline-dot spot"></div>
@@ -1154,7 +1154,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-title">抵达郴州</div>
-                    <div class="card-meta">上午抵达 · 自驾进市区 · 小雨19~25℃</div>
+                    <div class="card-meta">上午抵达 · 自驾进市区</div>
                     <p class="card-desc">广州走G4京港澳高速约4.5h直达，建议早6点前出发避堵，从郴州出口下高速直接开到酒店停车。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
@@ -1164,7 +1164,7 @@
                             <li>国庆高速容易堵，建议早6点前上高速</li>
                             <li>出发前加满油、检查胎压和玻璃水</li>
                             <li>确认ETC可用，避免出口排队</li>
-                            <li>2号预报小雨，雨天高速减速、开雾灯、保持车距</li>
+                            <li>雨天高速减速、开雾灯、保持车距</li>
                         </ul>
                     </div>
                     <button class="nav-pill secondary" onclick="openNav('汉庭酒店郴州裕后街店')">
@@ -1242,13 +1242,13 @@
 
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/1LS0OVHhez')">
-                    <span class="card-badge spot">📍 可选B · 避暑溶洞</span>
+                    <span class="card-badge spot">📍 可选B · 雨天首选</span>
                 </div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从酒店过来 · 约30分钟</div>
                     <div class="card-title">万华岩溶洞</div>
-                    <div class="card-meta">约¥50/人 · 游玩1.5小时 · 雨天首选</div>
-                    <p class="card-desc">天然空调！洞内常年18℃，钟乳石奇观，溪水贯穿全洞。下雨天首选——洞里不受天气影响。</p>
+                    <div class="card-meta">约¥50/人 · 游玩1.5小时 · 不受天气影响</div>
+                    <p class="card-desc">天然空调！洞内常年18℃，钟乳石奇观。下雨天首选——洞里完全不受天气影响。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
                     </button>
@@ -1256,7 +1256,7 @@
                         <ul>
                             <li>洞内湿滑，穿防滑鞋</li>
                             <li>带件薄外套，洞内比外面低10度</li>
-                            <li>雨天下午优先选这个，不受天气影响</li>
+                            <li>雨天下午优先选这个</li>
                         </ul>
                     </div>
                     <button class="nav-pill secondary" onclick="openNav('郴州万华岩溶洞')">
@@ -1273,8 +1273,8 @@
                 <div class="card-body">
                     <div class="drive-badge">🚗 从酒店过来 · 约15分钟</div>
                     <div class="card-title">苏仙岭</div>
-                    <div class="card-meta">约¥40/人 · 游玩2小时 · 城市名山</div>
-                    <p class="card-desc">郴州市区名山，有"天下第十八福地"之称。山路缓好爬，半山腰有白鹿洞、三绝碑。雨天路滑可坐缆车上下。</p>
+                    <div class="card-meta">约¥40/人 · 游玩2小时 · 雨天坐缆车</div>
+                    <p class="card-desc">郴州市区名山，有"天下第十八福地"之称。雨天路滑可坐缆车上下。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
                     </button>
@@ -1303,7 +1303,7 @@
                     <div class="drive-badge">🚶 从酒店步行 · 约8分钟</div>
                     <div class="card-title">裕后街</div>
                     <div class="card-meta">傍晚-晚上 · 游玩1-2小时 · 免费</div>
-                    <p class="card-desc">千年古街夜景，灯笼临水倒映，烟火气十足。郴州本地小吃集散地。雨天灯笼映水另有味道。</p>
+                    <p class="card-desc">千年古街夜景，灯笼临水倒映，烟火气十足。雨天灯笼映水另有味道。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
                     </button>
@@ -1366,7 +1366,7 @@
                         </ul>
                     </div>
                     <button class="meituan-pill" onclick="openMeituan('郴州 砍肉粉')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
                         美团找店
                     </button>
                 </div>
@@ -1406,7 +1406,7 @@
                     <div class="drive-badge">🚶 市区湘菜馆 · 打车约10分钟</div>
                     <div class="card-title">栖凤渡烧鸡公</div>
                     <div class="card-meta">人均¥70-90 · 栖凤渡另一头牌</div>
-                    <p class="card-desc">茶油烧散养土鸡，香辣浓郁、越煮越入味，比血鸭更重口，是栖凤渡镇和鱼粉齐名的招牌。</p>
+                    <p class="card-desc">茶油烧散养土鸡，香辣浓郁、越煮越入味，比血鸭更重口。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
                     </button>
@@ -1432,16 +1432,7 @@
                     <div class="drive-badge">🚶 裕后街/市区小吃店</div>
                     <div class="card-title">桂东黄糍粑</div>
                     <div class="card-meta">人均¥10-15 · 桂东非遗小吃</div>
-                    <p class="card-desc">桂东特产黄元米果，煎到外脆里糯、蘸糖吃，香甜Q弹。逛街当零食，孩子特别爱吃。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)">
-                        避坑指南 <span class="arrow">▾</span>
-                    </button>
-                    <div class="tips-content">
-                        <ul>
-                            <li>现煎的最好吃，放凉会硬</li>
-                            <li>也有蒸/炒咸口，可都试试</li>
-                        </ul>
-                    </div>
+                    <p class="card-desc">桂东特产黄元米果，煎到外脆里糯、蘸糖吃，香甜Q弹。</p>
                     <button class="meituan-pill" onclick="openMeituan('郴州 桂东黄糍粑')">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
                         美团找店
@@ -1508,19 +1499,19 @@
 
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/8TYkHPOHRM')">
-                    <span class="card-badge spot">📍 核心景点 · 10/3中雨</span>
+                    <span class="card-badge spot">📍 核心景点 · 仰天湖</span>
                 </div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从市区早餐处 · 约1.5小时</div>
                     <div class="card-title">仰天湖大草原</div>
-                    <div class="card-meta">¥120/人 · 游玩3.5-4小时 · 山上约12℃</div>
+                    <div class="card-meta">¥120/人 · 游玩3.5-4小时 · 山上比山下低6℃</div>
                     <p class="card-desc">南方呼伦贝尔，海拔1314米高山草原。打卡风车山脊、霍比特小屋、湖边栈道、喂小鹿。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         雨天避坑 <span class="arrow">▾</span>
                     </button>
                     <div class="tips-content">
                         <ul>
-                            <li>3号预报中雨，山上比山下低5-8℃ ≈ 12-19℃，风雨湿冷，必穿冲锋衣+防滑鞋</li>
+                            <li>山上比山下低5-8℃，必穿冲锋衣+防滑鞋</li>
                             <li>雨天盘山公路湿滑，慢行、不弯道超车，易晕车提前吃药</li>
                             <li>雨大雾大时草原白茫茫，骑马项目可能关闭，带好"缩水玩"的心态</li>
                             <li>景区内水和吃的贵，自带干粮和干毛巾/袜子</li>
@@ -1546,7 +1537,7 @@
                     <div class="drive-badge">🚗 从仰天湖下山 · 约1小时</div>
                     <div class="card-title">安曼轻奢客栈（小东江店）</div>
                     <div class="card-meta">小东江轻奢客栈 · 近观雾带</div>
-                    <p class="card-desc">已订。轻奢风格客栈，靠近小东江观雾带，第二天清晨能最快到观景台，看完晨雾回客栈吃早餐。</p>
+                    <p class="card-desc">已订。靠近小东江观雾带，第二天清晨能最快到观景台。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         入住/退订提示 <span class="arrow">▾</span>
                     </button>
@@ -1578,7 +1569,7 @@
                     <div class="drive-badge">🚗 从酒店过来 · 约5分钟</div>
                     <div class="card-title">东江清水鱼</div>
                     <div class="card-meta">人均¥60-80 · 现捞现做</div>
-                    <p class="card-desc">东江湖现捞三角鲂，清蒸最鲜。一鱼两吃：清蒸一半、鱼汤另一半。选门口有鱼池的店。</p>
+                    <p class="card-desc">东江湖现捞三角鲂，清蒸最鲜。一鱼两吃：清蒸一半、鱼汤另一半。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
                     </button>
@@ -1604,7 +1595,7 @@
                     <div class="drive-badge">🚗 从酒店过来 · 约5分钟</div>
                     <div class="card-title">嘉禾血鸭</div>
                     <div class="card-meta">人均¥50-70 · 湘南硬菜</div>
-                    <p class="card-desc">农家菜馆基本都有，子姜炒鸭血裹鸭，香辣下饭。配白米饭能吃三碗。</p>
+                    <p class="card-desc">农家菜馆基本都有，子姜炒鸭血裹鸭，香辣下饭。</p>
                     <button class="meituan-pill" onclick="openMeituan('资兴 嘉禾血鸭')">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
                         美团找店
@@ -1620,7 +1611,7 @@
                     <div class="drive-badge">🚗 从酒店过来 · 约5分钟</div>
                     <div class="card-title">土腊肉炒笋</div>
                     <div class="card-meta">人均¥30-40 · 山货特色</div>
-                    <p class="card-desc">山里冬笋/春笋炒农家自制腊肉，咸香下饭、锅气十足，当地农家菜必点的素菜。</p>
+                    <p class="card-desc">山里冬笋/春笋炒农家自制腊肉，咸香下饭。</p>
                     <button class="meituan-pill" onclick="openMeituan('资兴东江湖 农家菜')">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
                         美团找店
@@ -1636,16 +1627,7 @@
                     <div class="drive-badge">🚗 从酒店过来 · 约5分钟</div>
                     <div class="card-title">湖南米粉肉</div>
                     <div class="card-meta">人均¥40-55 · 农家蒸菜</div>
-                    <p class="card-desc">五花肉裹粗米粉蒸到软烂，肥而不腻、米香浓郁，老人小孩都能吃，农家菜馆常见。</p>
-                    <button class="tips-toggle" onclick="toggleTips(this)">
-                        避坑指南 <span class="arrow">▾</span>
-                    </button>
-                    <div class="tips-content">
-                        <ul>
-                            <li>蒸菜出餐慢，建议和鱼一起先点</li>
-                            <li>偏软糯，人少可以半份</li>
-                        </ul>
-                    </div>
+                    <p class="card-desc">五花肉裹粗米粉蒸到软烂，肥而不腻、米香浓郁。</p>
                     <button class="meituan-pill" onclick="openMeituan('资兴 米粉肉')">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
                         美团找店
@@ -1660,22 +1642,22 @@
         <div class="card-list">
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/o9rmSGou2u')">
-                    <span class="card-badge spot">📍 重中之重 · 10/4清晨</span>
+                    <span class="card-badge spot">📍 重中之重 · 清晨</span>
                 </div>
                 <div class="card-body">
                     <div class="drive-badge">🚶 从酒店步行 · 约3分钟</div>
                     <div class="card-title">雾漫小东江</div>
-                    <div class="card-meta">¥85/人 · 6:00-9:00最佳 · 中雨16~24℃</div>
+                    <div class="card-meta">¥85/人 · 6:00-9:00最佳 · 2号观景台</div>
                     <p class="card-desc">水墨仙境！清晨江面薄雾弥漫，渔夫撒网名场面。2号观景台是最佳拍摄点。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         雨天观雾 <span class="arrow">▾</span>
                     </button>
                     <div class="tips-content">
                         <ul>
-                            <li>4号预报中雨、湿度90%+：前一日下雨清晨雾反而更浓，"烟雨东江"可能比晴天更出片</li>
+                            <li>前一日下雨清晨雾反而更浓，"烟雨东江"可能比晴天更出片</li>
                             <li>穿一次性雨衣（别打伞，腾出手拍照），栈道湿滑注意脚下</li>
                             <li>雨天渔夫撒网表演可能取消，6点先到2号台问工作人员</li>
-                            <li>清晨江边约16℃，带外套</li>
+                            <li>清晨江边凉（约16℃），带外套</li>
                             <li>国庆人巨多，提前一天在官方公众号预约门票</li>
                         </ul>
                     </div>
@@ -1697,8 +1679,8 @@
                 <div class="card-body">
                     <div class="drive-badge">🚗 从小东江景区 · 约30分钟</div>
                     <div class="card-title">白廊环湖公路</div>
-                    <div class="card-meta">免费 · 游玩1-2小时 · 雨天雾景</div>
-                    <p class="card-desc">郴州小洱海，12.4公里环湖公路，湖面开阔。雨天湖面云雾缭绕，人少清净。</p>
+                    <div class="card-meta">免费 · 游玩1-2小时</div>
+                    <p class="card-desc">郴州小洱海，12.4公里环湖公路，湖面开阔。雨天湖面云雾缭绕。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
                     </button>
@@ -1722,7 +1704,7 @@
 
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/nY4mziBHqV')">
-                    <span class="card-badge spot">📍 竹筏丹霞 · 雨天备选</span>
+                    <span class="card-badge spot">📍 竹筏丹霞</span>
                 </div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从白廊景区 · 约1小时</div>
@@ -1752,7 +1734,7 @@
 
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/yEfv2rhyHY')">
-                    <span class="card-badge free">📍 雨天首选 · 免费工业风</span>
+                    <span class="card-badge free">📍 雨天首选 · 免费</span>
                 </div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从白廊景区 · 约50分钟</div>
@@ -1843,7 +1825,7 @@
                     <div class="drive-badge">🚗 从马皇丘 · 约30-40分钟</div>
                     <div class="card-title">高椅岭客栈（高椅岭景区店）</div>
                     <div class="card-meta">高椅岭景区旁 · 方便次日错峰入园</div>
-                    <p class="card-desc">已订。就在高椅岭景区附近，次日清晨7点前进园错峰最省事，看完丹霞回客栈收拾，再开车上高速回广州。</p>
+                    <p class="card-desc">已订。就在高椅岭景区附近，次日清晨7点前进园错峰最省事。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         入住/退订提示 <span class="arrow">▾</span>
                     </button>
@@ -1874,19 +1856,19 @@
         <div class="card-list">
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/l23oHkPMdr')">
-                    <span class="card-badge spot">📍 错峰必去 · 10/5清晨小雨</span>
+                    <span class="card-badge spot">📍 错峰必去 · 清晨</span>
                 </div>
                 <div class="card-body">
                     <div class="drive-badge">🚗 从高椅岭客栈 · 约10分钟（景区旁）</div>
                     <div class="card-title">高椅岭</div>
-                    <div class="card-meta">¥95/人 · 7:00前进园 · 游玩2.5小时 · 14~18℃</div>
+                    <div class="card-meta">¥95/人 · 7:00前进园 · 游玩2.5小时</div>
                     <p class="card-desc">丹霞地貌天花板，红岩绿水、龙脊步道。早7点前入园避开旅行团。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         雨天安全 <span class="arrow">▾</span>
                     </button>
                     <div class="tips-content">
                         <ul>
-                            <li>5号预报小雨14-18℃，红岩极滑！穿防滑鞋、靠内侧走、不临崖拍照</li>
+                            <li>红岩极滑！穿防滑鞋、靠内侧走、不临崖拍照</li>
                             <li>雨大就只走龙脊精华段折返，别贪全程</li>
                             <li>7点前到！9点后旅行团扎堆</li>
                             <li>国庆限流，提前在公众号预约门票</li>
@@ -1911,7 +1893,7 @@
                 <div class="card-body">
                     <div class="drive-badge">🚗 从高椅岭景区 · 约4.5小时</div>
                     <div class="card-title">自驾返程回广州</div>
-                    <div class="card-meta">建议10:00前出发 · 雨天+国庆尾峰</div>
+                    <div class="card-meta">建议10:00前出发 · 国庆尾峰</div>
                     <p class="card-desc">游玩结束直接上G4京港澳高速回广州，全程约4.5h。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">
                         避坑指南 <span class="arrow">▾</span>
@@ -1919,7 +1901,7 @@
                     <div class="tips-content">
                         <ul>
                             <li>出发前加满油，服务区别停太久</li>
-                            <li>5号预报小雨，返程雨天高速减速、保持车距</li>
+                            <li>雨天高速减速、保持车距</li>
                             <li>国庆下午返程必堵，尽量10点前上高速</li>
                             <li>提前下好离线音乐/播客，长路不无聊</li>
                         </ul>
@@ -2070,7 +2052,7 @@
 
         // ===== 下一站提醒 =====
         const nextStops = {
-            '1': { name: '仰天湖大草原', drive: '车程约1.5小时 · 中雨·山上12℃', place: '郴州仰天湖大草原' },
+            '1': { name: '仰天湖大草原', drive: '车程约1.5小时 · 盘山公路', place: '郴州仰天湖大草原' },
             '2': { name: '雾漫小东江', drive: '清晨6点 · 步行3分钟到景区', place: '郴州东江湖风景区' },
             '3': { name: '高椅岭', drive: '早上7点前进园 · 车程15分钟', place: '郴州高椅岭风景区' },
             '4': { name: '自驾回广州', drive: '车程约4.5小时 · 建议10点前出发', place: '广州市' }
@@ -2089,7 +2071,6 @@
             openNav(stop.place);
         }
 
-        // 监听Tab切换更新下一站
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 if (btn.dataset.day !== 'overview') {
@@ -2106,7 +2087,6 @@
             }, 8000);
         }
 
-        // 首次访问自动提示
         setTimeout(() => {
             if (!localStorage.getItem('installShown')) {
                 showInstallHint();
@@ -2151,6 +2131,81 @@
                 if (!jumped) window.location.href = fallback;
             }, 1600);
         }
+
+        // ===== 实时天气（Open-Meteo，免key，每次打开页面自动拉取） =====
+        function wmoIcon(code, isDay) {
+            if (code === 0) return isDay ? '☀️' : '🌙';
+            if (code === 1) return isDay ? '🌤️' : '🌙';
+            if (code === 2) return '⛅';
+            if (code === 3) return '☁️';
+            if (code === 45 || code === 48) return '🌫️';
+            if (code >= 51 && code <= 57) return '🌦️';
+            if (code >= 61 && code <= 67) return '🌧️';
+            if (code >= 71 && code <= 77) return '🌨️';
+            if (code >= 80 && code <= 82) return '🌦️';
+            if (code >= 95) return '⛈️';
+            return '🌡️';
+        }
+        function wmoText(code) {
+            if (code === 0) return '晴';
+            if (code === 1) return '多云转晴';
+            if (code === 2) return '多云';
+            if (code === 3) return '阴';
+            if (code === 45 || code === 48) return '雾';
+            if (code >= 51 && code <= 57) return '毛毛雨';
+            if (code >= 61 && code <= 65) return '雨';
+            if (code >= 66 && code <= 67) return '冻雨';
+            if (code >= 71 && code <= 77) return '雪';
+            if (code >= 80 && code <= 82) return '阵雨';
+            if (code >= 95) return '雷雨';
+            return '—';
+        }
+        async function loadWeather() {
+            const iconEl = document.getElementById('weatherIcon');
+            const tempEl = document.getElementById('weatherTemp');
+            const descEl = document.getElementById('weatherDesc');
+            const mTempEl = document.getElementById('mountainTemp');
+            const alertEl = document.getElementById('rainAlertText');
+            try {
+                const url = 'https://api.open-meteo.com/v1/forecast?latitude=25.77&longitude=113.01&current=temperature_2m,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FShanghai&forecast_days=16';
+                const r = await fetch(url);
+                if (!r.ok) throw new Error('http ' + r.status);
+                const d = await r.json();
+                tempEl.textContent = '郴州 ' + Math.round(d.current.temperature_2m) + '℃';
+                iconEl.textContent = wmoIcon(d.current.weather_code, d.current.is_day === 1);
+
+                const plan = [
+                    { date: '2026-10-02', label: '10/2 抵达' },
+                    { date: '2026-10-03', label: '10/3 仰天湖' },
+                    { date: '2026-10-04', label: '10/4 东江' },
+                    { date: '2026-10-05', label: '10/5 高椅岭' }
+                ];
+                const idx = d.daily.time.map(t => t.slice(0, 10));
+                const parts = [];
+                let ythMin = null;
+                plan.forEach(p => {
+                    const i = idx.indexOf(p.date);
+                    if (i < 0) return;
+                    const w = d.daily.weather_code[i];
+                    const tmax = Math.round(d.daily.temperature_2m_max[i]);
+                    const tmin = Math.round(d.daily.temperature_2m_min[i]);
+                    const pop = d.daily.precipitation_probability_max[i] || 0;
+                    parts.push(p.label + ' ' + wmoText(w) + ' ' + tmin + '~' + tmax + '℃ 雨' + pop + '%');
+                    if (p.date === '2026-10-03') ythMin = Math.round(tmin - 6);
+                });
+                if (ythMin !== null) mTempEl.textContent = ythMin + '℃';
+                descEl.textContent = '实时更新 · 行程4天预报';
+                if (alertEl) {
+                    const now = new Date();
+                    const up = (now.getMonth() + 1) + '/' + now.getDate();
+                    alertEl.innerHTML = '<strong>天气（' + up + '实时）：</strong>' + parts.join('；') + '。仰天湖山上再低约6℃，带雨衣+冲锋衣+防滑鞋。';
+                }
+            } catch (e) {
+                descEl.textContent = '国庆多雨降温 · 带雨衣冲锋衣';
+                if (alertEl) alertEl.innerHTML = '<strong>天气加载失败，沿用预报：</strong>10/2-10/5 多雨，带雨衣+冲锋衣+防滑鞋。';
+            }
+        }
+        loadWeather();
     </script>
 
 </body></html>
