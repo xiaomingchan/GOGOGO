@@ -298,10 +298,11 @@
         <div class="timeline-item"><div class="timeline-time">上午</div><div class="timeline-dot free"></div><div class="timeline-info"><div class="timeline-name">白廊环湖公路</div><div class="timeline-meta">免费 · 郴州小洱海</div></div></div>
         <div class="timeline-item"><div class="timeline-time">下午</div><div class="timeline-dot spot"></div><div class="timeline-info"><div class="timeline-name">飞天山竹筏 / 711小镇</div><div class="timeline-meta">二选一 · 竹筏 or 免费工业风</div></div></div>
         <div class="timeline-item"><div class="timeline-time">傍晚</div><div class="timeline-dot free"></div><div class="timeline-info"><div class="timeline-name">马皇丘大峡谷</div><div class="timeline-meta">免费 · S弯日落</div></div></div>
-        <div class="timeline-item"><div class="timeline-time">晚上</div><div class="timeline-dot hotel"></div><div class="timeline-info"><div class="timeline-name">高椅岭客栈（景区店）</div><div class="timeline-meta">景区旁 · 次日错峰</div></div></div>
+        <div class="timeline-item"><div class="timeline-time">晚上</div><div class="timeline-dot hotel"></div><div class="timeline-info"><div class="timeline-name">高椅岭客栈 + 附近晚餐</div><div class="timeline-meta">景区旁 · 农家乐</div></div></div>
         <div class="timeline-day-title">10/5 周一 · 高椅岭返程</div>
         <div class="timeline-item"><div class="timeline-time">清晨</div><div class="timeline-dot spot"></div><div class="timeline-info"><div class="timeline-name">高椅岭</div><div class="timeline-meta">7点前进园 · 无人丹霞</div></div></div>
-        <div class="timeline-item"><div class="timeline-time">上午</div><div class="timeline-dot transport"></div><div class="timeline-info"><div class="timeline-name">自驾回广州</div><div class="timeline-meta">10点前出发避高峰</div></div></div>
+        <div class="timeline-item"><div class="timeline-time">上午</div><div class="timeline-dot food"></div><div class="timeline-info"><div class="timeline-name">郴州早午餐</div><div class="timeline-meta">吃完上高速</div></div></div>
+        <div class="timeline-item"><div class="timeline-time">中午</div><div class="timeline-dot transport"></div><div class="timeline-info"><div class="timeline-name">自驾回广州</div><div class="timeline-meta">10点前出发避高峰</div></div></div>
     </div>
     <div class="day-panel active" id="day-1">
         <div class="card-list">
@@ -801,6 +802,60 @@
                     </div>
                 </div>
             </div>
+            <div class="trip-divider"><span>晚上</span><div class="line"></div><span>高椅岭附近晚餐</span></div>
+            <div class="card">
+                <div class="rank-card-banner">🏆 高椅岭美食榜 · 实时</div>
+                <div class="card-body">
+                    <div class="card-title">打开美团选今晚农家乐</div>
+                    <p class="card-desc">高椅岭景区边农家乐多，先在美团看评分和人均，到店再点。</p>
+                    <div class="chip-row">
+                        <button class="meituan-chip" onclick="openMeituan('高椅岭 必吃榜')">🏅 高椅岭必吃榜</button>
+                        <button class="meituan-chip" onclick="openMeituan('高椅岭 农家菜')">🥬 农家菜</button>
+                        <button class="meituan-chip" onclick="openMeituan('郴州 烧鸡公')">🍗 烧鸡公</button>
+                        <button class="meituan-chip" onclick="openMeituan('高椅岭 土鸡')">🐔 土鸡</button>
+                        <button class="meituan-chip" onclick="openMeituan('高椅岭景区 附近美食')">📍 客栈附近</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/mHsvW0IIrr')"><span class="card-badge food">🍗 晚餐 · 必点1</span></div>
+                <div class="card-body">
+                    <div class="drive-badge">🚗 从客栈过来 · 约5-10分钟</div>
+                    <div class="card-title">烧鸡公火锅</div>
+                    <div class="card-meta">人均¥60-80 · 景区边农家乐招牌</div>
+                    <p class="card-desc">茶油炒土鸡+干辣椒，越煮越入味，山里冷天吃一锅正好。</p>
+                    <button class="meituan-pill" onclick="openMeituan('高椅岭 烧鸡公')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/UH5t9EadOo')"><span class="card-badge food">🥬 晚餐 · 必点2</span></div>
+                <div class="card-body">
+                    <div class="drive-badge">🚗 从客栈过来 · 约5-10分钟</div>
+                    <div class="card-title">农家土菜</div>
+                    <div class="card-meta">人均¥40-60 · 笋干/腊肉/时令蔬</div>
+                    <p class="card-desc">山里现摘笋、土腊肉、土鸡蛋，简单炒就香，下饭神器。</p>
+                    <button class="meituan-pill" onclick="openMeituan('高椅岭 农家菜')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/g1OTv5rSlO')"><span class="card-badge food">🥩 晚餐 · 必点3</span></div>
+                <div class="card-body">
+                    <div class="drive-badge">🚗 从客栈过来 · 约5-10分钟</div>
+                    <div class="card-title">米粉肉/蒸菜</div>
+                    <div class="card-meta">人均¥30-45 · 农家蒸菜</div>
+                    <p class="card-desc">五花肉裹米粉蒸到软烂，肥而不腻，配米饭一绝。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 米粉肉')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="day-panel" id="day-4">
@@ -825,19 +880,73 @@
                     </button>
                 </div>
             </div>
-            <div class="trip-divider"><span>游玩结束</span><div class="line"></div><span>自驾回广州约4.5h</span></div>
+            <div class="trip-divider"><span>下山约9:30</span><div class="line"></div><span>郴州早午餐再上高速</span></div>
+            <div class="card">
+                <div class="rank-card-banner">🏆 郴州早午餐 · 实时</div>
+                <div class="card-body">
+                    <div class="card-title">打开美团选早午餐</div>
+                    <p class="card-desc">玩完高椅岭下山，在郴州吃完午饭再上G4回广州，别饿肚子开车。</p>
+                    <div class="chip-row">
+                        <button class="meituan-chip" onclick="openMeituan('郴州 必吃榜')">🏅 郴州必吃榜</button>
+                        <button class="meituan-chip" onclick="openMeituan('栖凤渡鱼粉 郴州')">🐟 鱼粉</button>
+                        <button class="meituan-chip" onclick="openMeituan('郴州 砍肉粉')">🥣 砍肉粉</button>
+                        <button class="meituan-chip" onclick="openMeituan('郴州 湘菜')">🍚 湘菜馆</button>
+                        <button class="meituan-chip" onclick="openMeituan('郴州西 附近美食')">📍 高速口附近</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/LNLuDzRrMy')"><span class="card-badge food">🍜 早午餐 · 选项1</span></div>
+                <div class="card-body">
+                    <div class="drive-badge">🚗 从高椅岭下山 · 约30分钟到市区</div>
+                    <div class="card-title">栖凤渡鱼粉</div>
+                    <div class="card-meta">人均¥15-25 · 郴州招牌收尾</div>
+                    <p class="card-desc">临走再来一碗鲜辣鱼粉，红汤米粉，完美收官。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 栖凤渡鱼粉')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/Sa9OaLnXwc')"><span class="card-badge food">🍜 早午餐 · 选项2</span></div>
+                <div class="card-body">
+                    <div class="drive-badge">🚗 从高椅岭下山 · 约30分钟到市区</div>
+                    <div class="card-title">清汤砍肉粉</div>
+                    <div class="card-meta">人均¥12-20 · 不辣、好消化</div>
+                    <p class="card-desc">骨汤鲜肉粉，吃完上高速不犯困，开车稳。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 砍肉粉')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/2hLsFsfAdH')"><span class="card-badge food">🍡 路上零嘴/伴手礼</span></div>
+                <div class="card-body">
+                    <div class="drive-badge">🛒 市区超市/特产店</div>
+                    <div class="card-title">桂东黄糍粑 / 临武鸭</div>
+                    <div class="card-meta">人均¥30-50 · 带回去给朋友</div>
+                    <p class="card-desc">路上零嘴+伴手礼。黄糍粑煎着吃、临武鸭开袋即食，服务区当零食。</p>
+                    <button class="meituan-pill" onclick="openMeituan('郴州 特产 临武鸭')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"></path></svg>
+                        美团找店
+                    </button>
+                </div>
+            </div>
+            <div class="trip-divider"><span>吃完出发</span><div class="line"></div><span>自驾回广州约4.5h</span></div>
             <div class="card">
                 <div class="card-image" style="background-image: url('https://aka.doubaocdn.com/s/jJdBIQqJna')"><span class="card-badge transport">🚗 返程 · 10/5</span></div>
                 <div class="card-body">
-                    <div class="drive-badge">🚗 从高椅岭景区 · 约4.5小时</div>
+                    <div class="drive-badge">🚗 从郴州市区上高速 · 约4.5小时</div>
                     <div class="card-title">自驾返程回广州</div>
-                    <div class="card-meta">建议10:00前出发 · 国庆尾峰</div>
-                    <p class="card-desc">游玩结束直接上G4京港澳高速回广州，全程约4.5h。</p>
+                    <div class="card-meta">建议11:00前上高速 · 国庆尾峰</div>
+                    <p class="card-desc">吃完午饭直接上G4京港澳高速回广州，全程约4.5h。</p>
                     <button class="tips-toggle" onclick="toggleTips(this)">避坑指南 <span class="arrow">▾</span></button>
                     <div class="tips-content"><ul>
                         <li>出发前加满油，服务区别停太久</li>
                         <li>雨天高速减速、保持车距</li>
-                        <li>国庆下午返程必堵，尽量10点前上高速</li>
+                        <li>国庆下午返程必堵，尽量11点前上高速</li>
                     </ul></div>
                     <button class="nav-pill secondary" onclick="openNav('广州市')">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
@@ -986,7 +1095,7 @@
             '1': { name: '仰天湖大草原', drive: '车程约1.5小时 · 盘山公路', place: '郴州仰天湖大草原' },
             '2': { name: '雾漫小东江', drive: '清晨6点 · 步行3分钟到景区', place: '郴州东江湖风景区' },
             '3': { name: '高椅岭', drive: '早上7点前进园 · 车程15分钟', place: '郴州高椅岭风景区' },
-            '4': { name: '自驾回广州', drive: '车程约4.5小时 · 建议10点前出发', place: '广州市' }
+            '4': { name: '自驾回广州', drive: '车程约4.5小时 · 建议11点前上高速', place: '广州市' }
         };
         function updateNextStop(dayNum) {
             const stop = nextStops[dayNum]; if (!stop) return;
