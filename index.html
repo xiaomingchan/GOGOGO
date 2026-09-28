@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-title" content="郴州攻略">
     <meta name="theme-color" content="#f5f5f7">
     <link rel="apple-touch-icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='22' fill='%230071e3'/&gt;&lt;text x='50' y='68' font-size='52' text-anchor='middle' fill='white'&gt;郴&lt;/text&gt;&lt;/svg&gt;">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         :root {
@@ -141,7 +142,6 @@
         }
         .btn-row .meituan-pill { margin-top: 0; }
         .meituan-pill:active { transform: scale(0.98); background: #F0C200; }
-        /* ===== 榜单小胶囊 ===== */
         .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
         .meituan-chip {
             padding: 8px 14px; background: #FFF7DB; color: #7a5c00;
@@ -208,6 +208,33 @@
         .tab-bar-item.active { color: var(--apple-blue); }
         .tab-bar-item svg { width: 22px; height: 22px; }
         @media (min-width: 768px) { body { max-width: 480px; margin: 0 auto; } }
+
+        /* ===== 路线总览地图 ===== */
+        #routeMap {
+            height: 380px;
+            border-radius: 14px;
+            margin-top: 10px;
+            z-index: 1;
+            background: #e8e8ed;
+        }
+        .leaflet-popup-content-wrapper {
+            border-radius: 12px;
+            font-family: -apple-system, "PingFang SC", sans-serif;
+        }
+        .leaflet-popup-content { margin: 12px 14px; font-size: 13px; line-height: 1.5; }
+        .popup-nav-btn {
+            display: inline-block; margin-top: 6px; padding: 6px 12px;
+            background: var(--apple-blue); color: white; border-radius: 14px;
+            font-size: 12px; font-weight: 600; text-decoration: none;
+        }
+        .map-legend {
+            display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
+            font-size: 11px; color: var(--apple-text-secondary);
+        }
+        .legend-dot {
+            display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+            vertical-align: middle; margin-right: 4px;
+        }
     </style>
 </head>
 <body>
@@ -267,6 +294,21 @@
 
     <!-- ====== 时间轴总览 ====== -->
     <div class="timeline-overview" id="day-overview">
+        <!-- 路线地图总览 -->
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">🗺️ 路线总览</div>
+                <p class="card-desc">按天分色连线，点 marker 弹"导航"按钮，直接唤起苹果/高德/百度地图。</p>
+                <div id="routeMap"></div>
+                <div class="map-legend">
+                    <span><span class="legend-dot" style="background:#0071e3"></span>D1 抵达+市区</span>
+                    <span><span class="legend-dot" style="background:#af52de"></span>D2 仰天湖→东江</span>
+                    <span><span class="legend-dot" style="background:#ff9500"></span>D3 东江→丹霞</span>
+                    <span><span class="legend-dot" style="background:#8e8e93"></span>D4 高椅岭→广州</span>
+                </div>
+            </div>
+        </div>
+
         <div class="timeline-day-title">10/2 周五 · 抵达市区</div>
         <div class="timeline-item"><div class="timeline-time">上午</div><div class="timeline-dot transport"></div><div class="timeline-info"><div class="timeline-name">自驾抵达郴州</div><div class="timeline-meta">G4京港澳约4.5h</div></div></div>
         <div class="timeline-item"><div class="timeline-time">中午</div><div class="timeline-dot hotel"></div><div class="timeline-info"><div class="timeline-name">汉庭酒店入住（裕后街）</div><div class="timeline-meta">裕后街旁 · 免费停车</div></div></div>
@@ -425,7 +467,6 @@
                 </div>
             </div>
 
-            <!-- ===== 必吃榜实时入口（Day1 晚餐段） ===== -->
             <div class="card">
                 <div class="rank-card-banner">🏆 美团必吃榜 · 实时</div>
                 <div class="card-body">
@@ -635,7 +676,6 @@
                 </div>
             </div>
 
-            <!-- ===== 必吃榜实时入口（Day2 东江镇晚餐） ===== -->
             <div class="card">
                 <div class="rank-card-banner">🏆 东江湖美食榜 · 实时</div>
                 <div class="card-body">
@@ -1009,17 +1049,78 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabBarItems = document.querySelectorAll('.tab-bar-item');
         const dayPanels = document.querySelectorAll('.day-panel');
         const overviewPanel = document.getElementById('day-overview');
+
+        let routeMapInited = false;
+        function initRouteMap() {
+            if (routeMapInited || typeof L === 'undefined') return;
+            routeMapInited = true;
+            const map = L.map('routeMap', { zoomControl: true, attributionControl: false });
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 17
+            }).addTo(map);
+
+            // [lat, lng, 显示名, 导航关键词]
+            const days = [
+                { color: '#0071e3', pts: [
+                    [25.77, 113.01, '抵达郴州', '郴州市'],
+                    [25.78, 113.03, '汉庭裕后街', '汉庭酒店郴州裕后街店'],
+                    [25.75, 113.03, '五岭阁', '郴州五岭阁'],
+                    [25.72, 112.92, '万华岩', '郴州万华岩溶洞']
+                ]},
+                { color: '#af52de', pts: [
+                    [25.57, 112.88, '仰天湖大草原', '郴州仰天湖大草原'],
+                    [25.82, 113.22, '安曼小东江客栈', '资兴安曼轻奢客栈小东江店']
+                ]},
+                { color: '#ff9500', pts: [
+                    [25.82, 113.22, '雾漫小东江', '郴州东江湖风景区'],
+                    [25.90, 113.35, '白廊环湖', '郴州白廊景区'],
+                    [25.88, 112.98, '飞天山', '郴州飞天山风景区'],
+                    [25.85, 112.95, '711时光小镇', '郴州711时光小镇'],
+                    [25.85, 112.93, '马皇丘', '郴州马皇丘大峡谷'],
+                    [25.92, 112.95, '高椅岭客栈', '高椅岭客栈高椅岭景区店']
+                ]},
+                { color: '#8e8e93', pts: [
+                    [25.92, 112.95, '高椅岭', '郴州高椅岭风景区'],
+                    [23.13, 113.26, '→ 回广州', '广州市']
+                ]}
+            ];
+
+            const allPts = [];
+            days.forEach(day => {
+                const latlngs = day.pts.map(p => [p[0], p[1]]);
+                L.polyline(latlngs, { color: day.color, weight: 3, opacity: 0.65 }).addTo(map);
+                day.pts.forEach(p => {
+                    allPts.push([p[0], p[1]]);
+                    const icon = L.divIcon({
+                        className: '',
+                        html: `<div style="background:${day.color};width:14px;height:14px;border-radius:50%;border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,0.35)"></div>`,
+                        iconSize: [14, 14], iconAnchor: [7, 7]
+                    });
+                    const m = L.marker([p[0], p[1]], { icon }).addTo(map);
+                    const kw = p[3].replace(/'/g, "\\'");
+                    m.bindPopup(`<b>${p[2]}</b><br><a class="popup-nav-btn" href="javascript:void(0)" onclick="openNav('${kw}')">点这里导航 →</a>`);
+                });
+            });
+            map.fitBounds(L.latLngBounds(allPts).pad(0.08));
+        }
+
         function switchDay(dayNum) {
             tabBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.day === dayNum));
             tabBarItems.forEach(item => item.classList.toggle('active', item.dataset.nav === dayNum));
             if (dayNum === 'overview') {
                 overviewPanel.classList.add('active');
                 dayPanels.forEach(p => p.classList.remove('active'));
+                // 等面板显示后再初始化/刷新地图尺寸
+                setTimeout(initRouteMap, 50);
+                if (typeof routeMapInited !== 'undefined' && routeMapInited) {
+                    setTimeout(() => { const maps = document.querySelectorAll('.leaflet-container'); maps.forEach(m => m._leaflet_id && window.dispatchEvent(new Event('resize'))); }, 100);
+                }
             } else {
                 overviewPanel.classList.remove('active');
                 dayPanels.forEach(p => p.classList.toggle('active', p.id === 'day-' + dayNum));
@@ -1028,6 +1129,7 @@
         }
         tabBtns.forEach(btn => btn.addEventListener('click', () => switchDay(btn.dataset.day)));
         tabBarItems.forEach(item => item.addEventListener('click', () => switchDay(item.dataset.nav)));
+
         function toggleTips(btn) {
             btn.classList.toggle('open');
             btn.nextElementSibling.classList.toggle('open');
